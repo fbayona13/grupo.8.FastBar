@@ -1,4 +1,4 @@
-![FastBar](FastBar_1.png)
+![FastBar](FastBar_tipo.png)
 
 
 ## OFERTA DE PRODUCTO O SERVICIO
