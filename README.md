@@ -1,3 +1,6 @@
+![FastBar](FastBar_1.png)
+
+
 ## OFERTA DE PRODUCTO O SERVICIO
 Un sitio web con el menu de tragos de un boliche / bar, que nos permita ver la carta, pagar en el momento y nos avise cuando esta nuestro trago para retirar en la barra.
 
@@ -38,3 +41,8 @@ Servicios gastronomicos
     - El mapa que nos muestra las canchas que tenemos cerca --> Podemos aplicarlo para poner ubicaciones cercanas de bares, boliches 
     - Formulario de reserva de cancha --> Podemos aplicarlo para reservar entradas, membresias, mesas, lugares, servicios
     - El KPI --> Podemos aplicarlo para conocer flujo de gente, demografia, ingresos, y fidelizacion de clientes
+
+## RECURSOS
+
+    Logo
+        Tipografia: https://www.fontspace.com/cclassic-font-f72895
