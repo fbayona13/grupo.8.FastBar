@@ -44,5 +44,7 @@ Servicios gastronomicos
 
 ## RECURSOS
 
-    Logo
-        Tipografia: https://www.fontspace.com/cclassic-font-f72895
+- Logo
+
+    - Disenio Logo: https://designer.gravit.io/
+    - Tipografia: https://www.fontspace.com/cclassic-font-f72895
