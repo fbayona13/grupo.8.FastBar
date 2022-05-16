@@ -35,7 +35,8 @@ Servicios gastronomicos
     - El carousel slider con los promocionales --> Podemos venderlo como espacio promocional para bares y boliches cercanos
     - Categorias en el Header --> Podemos aplicarlo para rapida accesibilidad
     - El Header se mantiene visible siempre --> Agilizaria la navegacion 
-    - El disenio sobrio y minimalista --> Podemos usar algo parecido, con colores de mas contraste para que sea facil y rapida navegacion. 
+    - El disenio sobrio y minimalista --> Podemos usar algo parecido, con colores de mas contraste para que sea facil y rapida navegacion.
+    - Un pop-up promocional de la marca en el home --> Promocion de la marca, fidelizacion de newsletter / usuarios
 
 - AlquilaTuCancha (https://alquilatucancha.com/)
     - El mapa que nos muestra las canchas que tenemos cerca --> Podemos aplicarlo para poner ubicaciones cercanas de bares, boliches 
