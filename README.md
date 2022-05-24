@@ -45,7 +45,11 @@ Servicios gastronomicos
 
 ## RECURSOS
 
-- Logo
-
+- Logo (ideas)
+    
     - Disenio Logo: https://designer.gravit.io/
     - Tipografia: https://www.fontspace.com/cclassic-font-f72895
+    - Colores
+        - rojo: #D50303
+        - blanco: #FFFFFF
+        - negro: #000000
