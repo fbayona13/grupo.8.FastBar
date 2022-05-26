@@ -4,6 +4,9 @@
 ## OFERTA DE PRODUCTO O SERVICIO
 Un sitio web con el menu de tragos de un boliche / bar, que nos permita ver la carta, pagar en el momento y nos avise cuando esta nuestro trago para retirar en la barra.
 
+##WIREFRAME 
+https://www.figma.com/proto/bAOfw0gwl9gYsO6JMnO8Ut/Alpha-wireframe?node-id=411%3A5&scaling=min-zoom&page-id=0%3A1
+
 ## PUBLICO OBJETIVO 
 Gente mayor de 18 anios que frecuente bares y boliches 
 
