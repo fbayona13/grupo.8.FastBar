@@ -1,8 +1,11 @@
-![FastBar](public/assets/Logos/FastBar_tipo.png)
+![FastBar](public/assets/Logos/LogoAlt.png)
 
 
 ## OFERTA DE PRODUCTO O SERVICIO
 Un sitio web con el menu de tragos de un boliche / bar, que nos permita ver la carta, pagar en el momento y nos avise cuando esta nuestro trago para retirar en la barra.
+
+## WIREFRAME
+https://www.figma.com/file/bAOfw0gwl9gYsO6JMnO8Ut/Alpha-wireframe?node-id=0%3A1
 
 ## PUBLICO OBJETIVO 
 Gente mayor de 18 anios que frecuente bares y boliches 
@@ -47,5 +50,22 @@ Servicios gastronomicos
 
 - Logo
 
+    - Fuente: Open Sans
+    - Colores: 
+        - #000000 (negro)
+        - #FFFFFF (blanco)
+
     - Disenio Logo: https://designer.gravit.io/
-    - Tipografia: https://www.fontspace.com/cclassic-font-f72895
+
+- Para la pagina
+
+    - Opciones de Fuentes: 
+
+        Montserrat: https://fonts.google.com/specimen/Montserrat
+        Montserrat Alternates: https://fonts.google.com/specimen/Montserrat+Alternates
+    
+        Source Sans Pro: https://fonts.google.com/specimen/Source+Sans+Pro
+
+        (porque son variables)
+        Josefin Sans: https://fonts.google.com/specimen/Josefin+Sans
+        Encode Sans: https://fonts.google.com/specimen/Encode+Sans
