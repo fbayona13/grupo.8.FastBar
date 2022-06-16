@@ -1,3 +1,5 @@
+# MODIFICACIONES SPRINT_1
+
 Logo --> Cambiar logo, esta mal
 
     figuras mas cuadradas
@@ -41,3 +43,6 @@ Wireframe --> No Va
             en forma de tile, imagen a la izquierda, nombre, detalles, boton de agregar / eliminar con el contador (abajo del nombre).
     
     version mobile --> agregar logos 
+
+[comment]:<modificaciones terminadas>
+[comment]:<modificaciones no corregidas>
