@@ -14,9 +14,11 @@
     2. Tengo que comunicarme mejor con el grupo
     3. Tengo que dedicarle un poco mas de tiempo al proyecto
     4. Dejar que todo fluya mas natural
+    5. Implementar codigo mas simple y eficiente
 
 ### STOP DOING
     1. Dejar de tratar de coordinar todo
+    2. Dejar de pensar tanto las cosas
 
 ### LESS OF
     1. Menos documentacion 
