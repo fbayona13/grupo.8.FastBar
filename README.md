@@ -16,10 +16,10 @@ TRELLO
 Gente mayor de 18 anios que frecuente bares y boliches 
 
 ## INTEGRANTES DEL GRUPO 
-- [Bayona Facundo](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/facundoBayona.md)
-- [Gonella Rodolfo](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/rodolfoGonella.md)
-- [McCrea Steele Matthew](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/matthewMcCrea.md)
-- [Rey Luciano](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/lucianoRey.md)
+- [Bayona Facundo](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/facundoBayona)
+- [Gonella Rodolfo](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/rodolfoGonella)
+- [McCrea Steele Matthew](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/matthewMcCrea)
+- [Rey Luciano](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/lucianoRey)
 
 ## TEMATICA
 Servicios gastronomicos
