@@ -1,4 +1,4 @@
-![FastBar](public/assets/Logos/LogoAlt.png)
+![FastBar](public/assets/Logos/LogoAlt.png) ![FastBarMiniature](public/assets/Logos/Logo.png)
 
 
 ## OFERTA DE PRODUCTO O SERVICIO
