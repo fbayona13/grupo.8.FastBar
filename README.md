@@ -16,7 +16,7 @@ TRELLO
 Gente mayor de 18 anios que frecuente bares y boliches 
 
 ## INTEGRANTES DEL GRUPO 
-- [Bayona Facundo] (/integrantes/facundoBayona.md)
+- [Bayona Facundo] (https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/facundoBayona.md)
 - Gonella Rodolfo
 - McCrea Steele Matthew 
 - Rey Luciano 
