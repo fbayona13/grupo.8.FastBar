@@ -4,14 +4,19 @@
 ## OFERTA DE PRODUCTO O SERVICIO
 Un sitio web con el menu de tragos de un boliche / bar, que nos permita ver la carta, pagar en el momento y nos avise cuando esta nuestro trago para retirar en la barra.
 
-## WIREFRAME
-https://www.figma.com/file/bAOfw0gwl9gYsO6JMnO8Ut/Alpha-wireframe?node-id=0%3A1
+## LINKS
+
+WIREFRAME
+    https://www.figma.com/file/bAOfw0gwl9gYsO6JMnO8Ut/Alpha-wireframe?node-id=0%3A1
+
+TRELLO
+    https://trello.com/invite/b/iCxXDeyI/1c87c71f246b0a305d89d3a0ad50ca78/fastbar
 
 ## PUBLICO OBJETIVO 
 Gente mayor de 18 anios que frecuente bares y boliches 
 
 ## INTEGRANTES DEL GRUPO 
-- Bayona Facundo 
+- [Bayona Facundo] (/integrantes/facundoBayona.md)
 - Gonella Rodolfo
 - McCrea Steele Matthew 
 - Rey Luciano 
