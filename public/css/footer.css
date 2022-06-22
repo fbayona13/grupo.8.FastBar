@@ -4,22 +4,22 @@
 }
 
 footer {
-  width: 100vw;
-  height: 25vh;
   background: black;
   color: snow;
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   align-content: center;
-  z-index: 9;
 }
 
 /*LOGO DEL FOOTER*/
 
 #footerLogoSection{
     width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #footerLogoImg{
@@ -32,10 +32,11 @@ footer {
 
 #infoSection{
     align-self: center;
+    flex-grow: 1;
 }
 
 section article{
-    font-size: 0.75rem;
+    font-size: 1vw;
     font-style: italic;
 }
 
@@ -46,9 +47,4 @@ section nav{
 section nav a i {
     font-size: 1.25rem;
     color: snow;
-}
-
-section h4{
-    position: relative;
-    top: 22vh;
 }
