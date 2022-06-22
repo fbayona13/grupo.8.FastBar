@@ -100,10 +100,13 @@ header section img {
 }
 
 @media screen and (max-width: 500px) {
-  #logoSection {
+  #searchBarSection {
     display: none;
   }
-  #searchBarSection {
+}
+
+@media screen and (max-width: 900px) {
+  #logoSection{
     display: none;
   }
 }

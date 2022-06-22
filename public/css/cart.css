@@ -1,0 +1,140 @@
+.cartSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    margin-top: 20vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 10vh;
+    gap: 1vw;
+}
+
+/*BOTON*/
+
+.buttonSection{
+    align-self: center;
+}
+
+.buttonMartini{
+    width: 15vw;
+    height: 5vh;
+    border-radius: 1rem;
+    background-color: black;
+}
+
+#martini{
+    font-size: 1rem;
+    color: snow;
+}
+
+/*LADO IZQUIERDO, CONTADOR*/
+.cartCounterSection{
+    flex-grow: .6;
+    background: lightgray;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+.cartItemSection{
+    width: 90%;
+    height: 10%;
+    margin-top: 2vh;
+    border-radius: 0.5rem;
+    background: snow;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.cartCounter{
+    flex-grow: .3;
+    align-self: center;
+
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    gap: 1vw;
+}
+
+.cartCounterTitle{
+    flex-grow: 0.6;
+    margin-left: 3vw;
+}
+
+.cartCounterP{
+    margin: 0;
+}
+
+/*MINIATURAS*/
+
+.cartFigureMiniature{
+    width: 10%;
+}
+
+.cartItemMiniature{
+    width: 100%;
+    height: auto;
+}
+
+/*LADO DERECHO, RESUMEN*/
+.cartResumeSection{
+    flex-grow: .2;
+    background: lightgray;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 2vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cartResume{
+    font-size: 0.75rem;
+    color: black;
+
+    margin-bottom: 3vh;
+}
+
+.cartResumeSubtotal{
+    font-size: 0.75rem;
+    color: grey;
+
+    display: grid;
+    grid-template-areas: "a a";
+}
+
+.cartResumeSubtotal h4{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+hr{
+    width: 90%;
+    background-color: grey;
+}
+
+.cartResumeTotal{
+    font-size: 0.75rem;
+    color: black;
+
+    display: grid;
+    grid-template-areas: "a a";
+}
+
+@media screen and (max-width: 750px) {
+    .cartCounterSection{
+        display: none;
+    }
+
+    .cartResumeSection{
+        flex-basis: 100%;
+    }
+}
