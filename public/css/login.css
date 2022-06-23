@@ -7,8 +7,10 @@
 
 body{
     background: hsl(0, 0, 65%);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana;
 }
+
+
 .container{
     width: 450px;
     padding: 100px;
