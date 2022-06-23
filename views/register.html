@@ -45,7 +45,68 @@
         </section>
     </header>
     <main>
-        
+        <div class="registerSection">
+            <section class="userSection">
+                <section class="userData">
+                    <figure class="avatarContenedor"><img class="avaratImg" src="/assets/Images/malik-skydsgaard-IgkwHPb-Vk8-unsplash.jpg" alt="user_photo.jpg"></figure>
+                    <h4 class="nombreCompleto">Nombre completo</h4>
+                    <p class="nombreUsuario">UserName#0000</p>
+                </section>
+                <section class="userData">
+                    <form action="/login" method="post" class="formularioDescripcion">
+                        <label for="userDescription">Descripcion: </label>
+                        <input type="textarea" name="userDescription" id="userDescription">
+                    </form>
+                </section>
+                <section class="userData">
+                    <nav>
+                        <a href="/"><i class="fa-brands fa-facebook" id="iconosRedes"></i></a>
+                        <a href="/"><i class="fa-brands fa-instagram" id="iconosRedes"></i></a>
+                        <a href="/"><i class="fa-brands fa-twitter" id="iconosRedes"></i></a>
+                    </nav>
+                </section>
+            </section>
+
+            <section class="userRegistrationForm">
+                <form action="/login" method="post" class="formularioRegister">
+                    <fielset class="fieldsetRegister">
+                        <label class="labelRegister" for="campoNombreApellido">Nombre y Apellido: </label>
+                        <input class="inputRegister" type="text" name="campoNombreApellido" id="campoNombreApellido" placeholder="Introduzca aqui su nombre y apellido" required>
+                    </fielset>
+                    <fielset class="fieldsetRegister">
+                        <label class="labelRegister" for="campoNombreUsuario">Nombre de usuario (ID): </label>
+                        <input class="inputRegister" type="text" name="campoNombreUsuario" id="campoNombreUsuario" placeholder="Debe ser unico" required>
+                    </fielset>
+                    <fielset class="fieldsetRegister">
+                        <label class="labelRegister" for="">Email: </label>
+                        <input class="inputRegister" type="email" name="campoEmail" id="campoEmail" placeholder="Introduzca aqui su email" required>
+                    </fielset>
+                    <fielset class="fieldsetRegister">
+                        <label class="labelRegister" for="campoCumpleanos">Fecha de nacimiento: </label>
+                        <input class="inputRegister" type="date" name="campoCumpleanos" id="campoCumpleanos" min="2000-01-02" required>
+                    </fielset>
+                    <fielset class="fieldsetRegister">
+                        <label class="labelRegister" for="campoContrasena">Contrasena: </label>
+                        <input class="inputRegister" type="password" name="campoContrasena" id="campoContrasena" required>
+                    </fielset>
+                    <fielset class="fieldsetRegister">
+                        <label class="labelRegister" for="campoContrasenaRepe">Confirmar contrasena: </label>
+                        <input class="inputRegister" type="password" name="campoContrasenaRepe" id="campoContrasenaRepe" required>
+                    </fielset>
+                    <fielset class="fieldsetRegister">
+                        <label class="labelRegister" for="campoAvatar"><i class="fa-solid fa-image"></i> Foto de perfil: </label>
+                        <input class="inputRegister" type="file" name="campoAvatar" name="campoAvatar" accept="image/*" required>
+                    </fielset>
+                    <fieldset class="fieldsetTermsConditions">
+                        <input type="checkbox" name="campoTerm" id="campoTerm" required>
+                        <label class="labelTemsConditions" for="campoTerm">acepto los terminos y condiciones de uso y privacidad</label>
+                    </fieldset>
+                    <fieldset class="fieldsetTermsConditions">
+                        <button class="registerButton" type="submit">REGISTRARSE</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
     </main>
     <footer>
         <section id="footerLogoSection"><img src="/assets/Logos/Logo.png" alt="logo-alt.png" id="footerLogoImg"></section>

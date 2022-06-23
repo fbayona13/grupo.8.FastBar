@@ -1,0 +1,144 @@
+/*AVATAR*/
+.avatarContenedor {
+  width: 50%;
+}
+
+.avaratImg {
+  width: 100%;
+  height: auto;
+
+  border-radius: 10vw;
+}
+
+/*REGISTER LADO IZQUIERDO*/
+
+.registerSection {
+  background-color: lightgrey;
+  padding: 5vw;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  margin-top: 20vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 10vh;
+  gap: 5vw;
+}
+
+.userSection {
+  flex-grow: 0.3;
+  width: 20vw;
+}
+
+.userRegistrationForm {
+  flex-grow: 0.6;
+  width: 20vw;
+}
+
+.userData {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin-bottom: 1vw;
+}
+
+.nombreCompleto {
+  font-size: 2vw;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.nombreUsuario {
+  text-align: center;
+  margin-top: 0.5vh;
+  font-style: italic;
+}
+
+.formularioDescripcion {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+form.formularioDescripcion label {
+  font-size: 1.2vw;
+}
+
+form.formularioDescripcion input {
+  height: 10vw;
+  border-radius: 0.75vw;
+}
+
+#iconosRedes {
+  margin-top: 1vh;
+  padding: 1vw;
+
+  font-size: 3vw;
+  color: black;
+}
+
+/*REGISTER LADO DERECHO*/
+
+.formularioRegister {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.fieldsetRegister {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.labelRegister{
+    font-size: 1.25vw;
+}
+
+.inputRegister{
+    width: 100%;
+}
+
+.fieldsetTermsConditions{
+    border: none;
+    align-self: center;
+}
+
+.labelTemsConditions{
+    font-size: 1.25vw;
+    font-style: italic;
+    color: darkgrey;
+}
+
+.registerButton{
+    width: 15vw;
+    height: 5vh;
+    border-radius: 1rem;
+    color: snow;
+    background-color: black;
+}
+
+
+@media screen and (max-width: 500px) {
+    .registerSection{
+        flex-direction: column;
+        gap: 0;
+    }
+    .userSection{
+        width: 100%;
+        flex-grow: 1;
+    }
+    .userRegistrationForm{
+        width: 100%;
+        flex-grow: 0;
+    }
+}
