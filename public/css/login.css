@@ -36,8 +36,8 @@ form{
 }
 .form__div{
     width: 100%
-    border: solid 1px rgb(10, 1, 1);
-    padding 10px 25px;
+    border: solid 2px #222;
+    padding: 10px 25px;
     border-radius: 20px;
 }
 input{
