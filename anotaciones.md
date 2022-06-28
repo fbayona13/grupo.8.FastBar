@@ -1,4 +1,4 @@
-# MODIFICACIONES SPRINT_1
+# SPRINT 1 (modificaciones)
 
 Logo --> Cambiar logo, esta mal
 
@@ -45,4 +45,36 @@ Wireframe --> No Va
     version mobile --> agregar logos 
 
 [comment]:<modificaciones terminadas>
-[comment]:<modificaciones no corregidas>
+
+
+# SPRINT 2 (modificaciones)
+
+    Botones de login --> revisar 
+    register --> font-size de los label = muy chicos 
+    height del main --> sacar 
+    img del logo --> conservar en la version mobile 
+    revisar html, mucho codigo al vicio 
+
+    W3C --> validador de html para ver los errores 
+    Las imagenes no tienen que tener espacios vacios en el nombre
+    Agregar link del producto hacia el detalle 
+    <figure> --> sacar, mejor <picture> que es mas flexible 
+    barra lateral --> hacerlo mejor con CSS
+
+[comment]:<modificaciones no hechas>
+
+# SPRINT 3
+
+    Creacion y edicion de productos
+
+        nombre
+        precio 
+        descripcion
+        imagen
+        categorias
+        colores (?)
+
+        tipo de alcohol
+        ingredientes que lleva 
+        historia (breve)
+        perfil de sabores 
