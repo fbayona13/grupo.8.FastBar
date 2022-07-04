@@ -1,52 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fast Bar</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-
-    <link rel="stylesheet" href="/css/home.css" />
-    <link rel="stylesheet" href="/css/home-tablet.css" />
-    <link rel="stylesheet" href="/css/home-desktop.css" />
-  </head>
+  <% include ('./includes/head.ejs') %>
   <body>
-    <header>
-      <section id="lateralNavBar">
-        <a href="#lateralMenu"><i class="fa-solid fa-bars" id="navbar"></i></a>
-      </section>
-      <nav id="lateralMenu">
-        <hr />
-        <div>
-          <button><i class="fa-solid fa-cart-shopping icono"></i></button>
-          <button><i class="fa-solid fa-user icono"></i></button>
-        </div>
-        <hr />
-        <a href="/">categoria 1</a>
-        <a href="/">categoria 2</a>
-        <a href="/">categoria 3</a>
-        <a href="/">categoria 4</a>
-        <a href="/">categoria 5</a>
-        <a href="#">Cerrar</a>
-      </nav>
+    <% include ('./includes/header.ejs') %> 
 
       <form action="/" method="get" id="searchBarForm">
         <fieldset id="searchBarFieldset">
@@ -276,27 +232,6 @@
         </article>
       </section>
     </main>
-    <footer>
-      <section id="footerLogoSection">
-        <img
-          src="/assets/Logos/Logo.png"
-          alt="logo-alt.png"
-          id="footerLogoImg"
-        />
-      </section>
-      <section id="infoSection">
-        <nav>
-          <a href="/"><i class="fa-brands fa-facebook"></i></a>
-          <a href="/"><i class="fa-brands fa-instagram"></i></a>
-          <a href="/"><i class="fa-brands fa-twitter"></i></a>
-        </nav>
-        <article>
-          <p>fastbar-contact@email.com</p>
-          <p>direccion falsa 123, false, false</p>
-          <p>0000-000-0000</p>
-          <p>lorem ipsum sit dolum</p>
-        </article>
-      </section>
-    </footer>
+    <% include ('./includes/footer.ejs') %> 
   </body>
 </html>

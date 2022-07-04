@@ -1,26 +1,17 @@
-let express = require("express");
-let app = express();
-let path = require("path");
-const port = process.env.PORT || 3000;
-const callback = () => console.log("server started at localhost:" + port);
+const express = require("express");
+const path = require("path");
+const app = express();
+const {port, callback} = require ('./modules/port');
+app.listen(port, callback());
+app.use (require ('./modules/public'));
 
-app.listen(port, callback);
+//configuracion EJS
+app.set ('views', path.resolve (__dirname, 'views'));
+app.set ('views engines', 'ejs')
 
-const public = path.resolve(__dirname, "../public");
-app.use(express.static(public));
-
-app.get("/", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "../views/home.html"))
-);
-app.get("/login", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "../views/login.html"))
-);
-app.get("/register", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "../views/register.html"))
-);
-app.get("/cart", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "../views/cart.html"))
-);
-app.get("/productDetail", (req, res) =>
-  res.sendFile(path.resolve(__dirname, "../views/productDetail.html"))
-);
+//ruta para Home, Cart
+app.use (require ('./routes/main.routes'));
+//ruta para productDetail, Create, Edit
+app.use (require ('./routes/products.routes'));
+//ruta para Register, Login
+app.use (require ('./routes/user.routes'))
