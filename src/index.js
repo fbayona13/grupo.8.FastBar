@@ -7,7 +7,7 @@ app.use (require ('./modules/public'));
 
 //configuracion EJS
 app.set ('views', path.resolve (__dirname, 'views'));
-app.set ('views engines', 'ejs')
+app.set ('view engine', 'ejs')
 
 //ruta para Home, Cart
 app.use (require ('./routes/main.routes'));

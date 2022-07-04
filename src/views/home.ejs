@@ -1,36 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <% include ('./includes/head.ejs') %>
+  <%- include ('./includes/head.ejs') %>
   <body>
-    <% include ('./includes/header.ejs') %> 
+    <%- include ('./includes/header.ejs') %> 
 
-      <form action="/" method="get" id="searchBarForm">
-        <fieldset id="searchBarFieldset">
-          <input
-            type="search"
-            name="searchBar"
-            id="searchBar"
-            placeholder="Buscar tragos por nombre, bar, o espirituosa..."
-          />
-          <button id="searchBarButton">
-            <i class="fa-solid fa-search"></i>
-          </button>
-        </fieldset>
-      </form>
-
-      <nav id="logoSection">
-        <a href="/">
-          <img src="/assets/Logos/LogoAlt.png" alt="logo.png" />
-        </a>
-      </nav>
-
-      <section id="loginCartSection">
-        <nav id="loginCartNav">
-          <a href="/cart"><i class="fa-solid fa-cart-shopping icono"></i></a>
-          <a href="/login"><i class="fa-solid fa-user icono"></i></a>
-        </nav>
-      </section>
-    </header>
     <main>
       <picture id="bannerFigure">
         <img src="/assets/Mkt/22.png" alt="cumple-tliste.png" id="bannerHome" />
@@ -232,6 +205,6 @@
         </article>
       </section>
     </main>
-    <% include ('./includes/footer.ejs') %> 
+    <%- include ('./includes/footer.ejs') %> 
   </body>
 </html>

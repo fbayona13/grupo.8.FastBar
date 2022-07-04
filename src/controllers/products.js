@@ -1,7 +1,8 @@
 module.exports = {
   productDetail: (req, res) => {
-    return res.render("productDetail.ejs", {
+    return res.render("products/productDetail", {
       title: "Product Detail",
+      style: "productDetail"
     });
   },
 };
