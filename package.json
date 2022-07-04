@@ -4,7 +4,7 @@
   "description": "proyecto integrador, servicio de venta de tragos",
   "main": "index.js",
   "scripts": {
-    "test": "clear && node src/index.js",
+    "test": "nodemon src/index.js",
     "start": "node src/index.js"
   },
   "keywords": [],

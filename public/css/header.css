@@ -31,24 +31,60 @@ header {
   background-color: hsl(0, 0%, 0%);
 }
 
-/*BARRA DE BUSQUEDA*/
-#searchBarSection {
-  width: 35%;
+#lateralMenu {
+  position: fixed;
+  top: 10vh;
+
+  width: 12rem;
+  height: 100vh;
+  color: snow;
+  background-color: hsl(0, 0%, 0%);
+
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  padding: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  
+  visibility: hidden;
 }
 
+nav#lateralMenu a {
+  text-decoration: none;
+  color: snow;
+}
+
+nav#lateralMenu hr {
+  width: 80%;
+  color: snow;
+}
+
+nav#lateralMenu button {
+  background-color: hsl(0, 0%, 0%);
+  font-size: 1rem;
+  margin: 0 1rem;
+  border: none;
+}
+
+#lateralMenu:target {
+  visibility: visible;
+}
+
+/*BARRA DE BUSQUEDA*/
 #searchBar {
   align-self: stretch;
-  width: 90%;
+  border: none;
   border-radius: 0.75rem 0 0 0.75rem;
   height: 1.5rem;
 }
 
 #searchBarForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 0.5rem;
+
   flex-grow: 1;
 }
 
@@ -62,19 +98,19 @@ header {
 }
 
 #searchBarButton {
+  border: none;
   background-color: white;
   border-radius: 0 0.75rem 0.75rem 0;
 }
 
 /*LOGO*/
 #logoSection {
-  width: 10%;
+  width: 15%;
 }
 
-header section img {
-  max-width: 100%;
-  max-height: auto;
-  object-fit: contain;
+nav#logoSection a img {
+  width: 100%;
+  height: auto;
 }
 
 /*ICONOS DE LOGIN Y CART*/
@@ -95,18 +131,23 @@ header section img {
   gap: 1rem;
 }
 
-#icono {
+.icono {
   color: snow;
+  background-color: hsl(0, 0%, 0%);
 }
 
 @media screen and (max-width: 500px) {
-  #searchBarSection {
-    display: none;
-  }
+
 }
 
 @media screen and (max-width: 900px) {
   #logoSection{
+    width: 20%;
+  }
+  #loginCartSection {
+    width: 65%;
+  }
+  #searchBarForm{
     display: none;
   }
 }

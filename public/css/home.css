@@ -11,12 +11,12 @@
 
 /*PRODUCTOS*/
 
-#productImg {
+.productImg {
   max-width: 100%;
   max-height: auto;
 }
 
-#productArticle {
+.productArticle {
   width: 100%;
   height: auto;
   border-width: 0.5rem;
@@ -30,7 +30,7 @@
   justify-content: center;
 }
 
-#productSection {
+.productSection {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

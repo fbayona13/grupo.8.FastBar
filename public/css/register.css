@@ -100,45 +100,55 @@ form.formularioDescripcion input {
   flex-direction: column;
 }
 
-.labelRegister{
-    font-size: 1.25vw;
+.labelRegister {
+  font-size: 1.5vw;
 }
 
-.inputRegister{
-    width: 100%;
+.inputRegister {
+  width: 100%;
 }
 
-.fieldsetTermsConditions{
-    border: none;
-    align-self: center;
+.fieldsetTermsConditions {
+  border: none;
+  align-self: center;
 }
 
-.labelTemsConditions{
-    font-size: 1.25vw;
-    font-style: italic;
-    color: darkgrey;
+.labelTemsConditions {
+  font-size: 1.25vw;
+  font-style: italic;
+  color: darkgrey;
 }
 
-.registerButton{
-    width: 15vw;
-    height: 5vh;
-    border-radius: 1rem;
-    color: snow;
-    background-color: black;
+.registerButton {
+  height: 5vh;
+  border-radius: 1rem;
+  color: snow;
+  background-color: black;
 }
-
 
 @media screen and (max-width: 500px) {
-    .registerSection{
-        flex-direction: column;
-        gap: 0;
-    }
-    .userSection{
-        width: 100%;
-        flex-grow: 1;
-    }
-    .userRegistrationForm{
-        width: 100%;
-        flex-grow: 0;
-    }
+  .registerSection {
+    flex-direction: column;
+    gap: 0;
+  }
+  .userSection {
+    width: 100%;
+    flex-grow: 1;
+  }
+  .userRegistrationForm {
+    width: 100%;
+    flex-grow: 0;
+  }
+  form.formularioDescripcion label {
+    font-size: 2vw;
+  }
+  .nombreCompleto {
+    font-size: 4vw;
+  }
+  .labelTemsConditions{
+    font-size: 2.25vw;
+  }
+  .labelRegister {
+    font-size: 2.5vw;
+  }
 }
