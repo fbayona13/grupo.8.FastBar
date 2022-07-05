@@ -69,12 +69,8 @@ Wireframe --> No Va
 
         nombre
         precio 
-        descripcion
+        descripcion (ingredientes que lleva)
         imagen
-        categorias
-        colores (?)
-
-        tipo de alcohol
-        ingredientes que lleva 
-        historia (breve)
-        perfil de sabores 
+        categoria (tipo de alcohol)
+        perfil de sabor
+        historia

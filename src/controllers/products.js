@@ -5,4 +5,18 @@ module.exports = {
       style: "productDetail"
     });
   },
+
+  newProduct: (req, res) => {
+    return res.render('products/newProduct', {
+      title: 'New Product',
+      style: 'newProduct'
+    });
+  },
+
+  editProduct: (req, res) => {
+    return res.render('products/editProduct', {
+      title: 'Edit Product',
+      style: 'editProduct'
+    });
+  }
 };
