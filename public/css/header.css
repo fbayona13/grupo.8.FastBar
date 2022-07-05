@@ -45,7 +45,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  
+
   visibility: hidden;
 }
 
@@ -137,17 +137,16 @@ nav#logoSection a img {
 }
 
 @media screen and (max-width: 500px) {
-
 }
 
 @media screen and (max-width: 900px) {
-  #logoSection{
+  #logoSection {
     width: 20%;
   }
   #loginCartSection {
     width: 65%;
   }
-  #searchBarForm{
+  #searchBarForm {
     display: none;
   }
 }
