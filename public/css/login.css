@@ -41,7 +41,7 @@ form{
 
 }
 .form__div{
-    width: 100%
+    width: 100%;
     border: solid 2px #222;
     padding: 10px 25px;
     border-radius: 20px;
@@ -109,3 +109,4 @@ p{
         max-width: 500px;
         margin: 0 auto;
     }
+}

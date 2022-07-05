@@ -1,0 +1,21 @@
+@media (min-width:500px) {
+
+.full-cathegory{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.left-section{
+display: flex;
+flex-wrap: nowrap;
+width: 49%;
+}  
+.right-section{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 49%;
+    
+}
+
+}
