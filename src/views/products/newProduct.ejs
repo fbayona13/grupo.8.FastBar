@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../includes/head.ejs') %>
+  <body>
+    <%- include ('../includes/header.ejs') %>
+
+    <main>
+      <div>
+        <form action="/" method="post">
+          <fieldset class="classNewDrink">
+            <label for="name">Nombre del trago</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="nombre del trago"
+              required
+            />
+          </fieldset>
+          <fieldset class="classNewDrink">
+            <label for="">Precio</label>
+            <input
+              type="number"
+              name="precio"
+              id="precio"
+              placeholder="precio"
+              required
+            />
+          </fieldset>
+          <fieldset class="classNewDrink">
+            <label for="">Ingredientes</label>
+            <input
+              type="textarea"
+              name="ingredientes"
+              id="ingredientes"
+              placeholder="lista de ingedientes, no es necesario cantidades (200)"
+              maxlength="200"
+              required
+            />
+          </fieldset>
+          <fieldset class="classNewDrink">
+            <label for="">Imagen</label>
+            <input
+              type="file"
+              name="image"
+              id="image"
+              accept="image/*"
+              placeholder="Foto del trago fachero"
+              required
+            />
+          </fieldset>
+          <fieldset class="classNewDrink">
+            <label for="">Categoria</label>
+            <select name="categorias" id="categorias">
+              <option value="">--Elegir una categoria--</option>
+              <option value="categoria1">categoria1</option>
+              <option value="categoria2">categoria2</option>
+              <option value="categoria3">categoria3</option>
+              <option value="categoria4">categoria4</option>
+              <option value="categoria5">categoria5</option>
+            </select>
+          </fieldset>
+          <fieldset class="classNewDrink">
+            <label for="">Perfil de sabor</label>
+            <input
+              type="textarea"
+              name="sabor"
+              id="sabor"
+              placeholder="describa brevemente el sabor del trago (200)"
+              maxlength="200"
+              required
+            />
+          </fieldset>
+          <fieldset class="classNewDrink">
+            <label for="">Breve historia (opcional)</label>
+            <input
+              type="textarea"
+              name="historia"
+              id="historia"
+              placeholder="nos podes contar de donde viene el trago, o quien lo hizo! (200)"
+              maxlength="200"
+            />
+          </fieldset>
+          <fieldset class="fieldsetHabemusPotio">
+            <button type="reset" class="buttonHabemusPotio"><i class="fa-solid fa-trash"></i></button>
+            <button type="submit" class="buttonHabemusPotio">HABEMUS POTIO!</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+    <%- include ('../includes/footer.ejs') %>
+  </body>
+</html>

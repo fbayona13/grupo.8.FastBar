@@ -67,14 +67,32 @@ Wireframe --> No Va
 
     Creacion y edicion de productos
 
+        id
         nombre
         precio 
+        descripcion (ingredientes que lleva)
+        imagen
+        categoria (tipo de alcohol)
+        perfil de sabor
+        historia
+
+
+# SPRINT 4 (26/06 entrega)
+
+    Base de datos en JSON para products y usuarios
+
+        id --> producto
+        estado (true, false --> que el bar pueda o no hacer el trago)
+        nombre
+        precio
         descripcion
         imagen
-        categorias
-        colores (?)
+        categoria
+        perfil de sabor
+        historia
 
-        tipo de alcohol
-        ingredientes que lleva 
-        historia (breve)
-        perfil de sabores 
+        id --> usuarios clientes
+        etc
+
+    Modelo para interactuar con los datos 
+    CRUD
