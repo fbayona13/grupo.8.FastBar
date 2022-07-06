@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('../includes/head.ejs') %> 
-<link rel="stylesheet" href="/css/productDetail.css">
+  <%- include ('../includes/head.ejs') %>
+  
 
-
-<body>
-    <%- include ('../includes/header.ejs') %> 
+  <body>
+    <%- include ('../includes/header.ejs') %>
     <main>
+      <section class="full-cathegory">
+        <h2 class="drink">Aperol Spritz</h2>
 
-        <section class="full-cathegory">
-            
-                <article class="left-section">
-                    <h2 class="drink">Aperol Spritz</h2>
-                    <div class="border-left-section">
-                    <figure>
-                        <img src="assets/Images/AperolSpritz.jpeg" width="100%" class="imagen-trago">
-                    </figure>
-                    <div class="button-price">
-                            <h3 class="price">$650</h3>
-                        <form action="/" method="post">
-                            <button class="button-buy">Comprar</button>
-                        </form>
-                    </div>
-                    </div>
-                </article>
-            
-            <section class="right-section">
-                    
-                    <h3 class="drink-description">El Aperol es una bebida alcohólica de origen italiano de baja graduación alcohólica, sus ingredientes incluyen naranja amarga, ruibarbo, gentiana, cinchona, entre otros. Aunque sabe y huele muy similar al Campari, el Aperol tiene una graduación alcohólica de 11%.</h3>
-                    
-             </section>
+        <figure id="drink-picture">
+          <img
+            src="assets/Images/AperolSpritz.jpeg"
+            width="100%"
+            class="imagen-trago"
+          />
+        </figure>
+        <section class="right-section">
+        <h3 class="price">$650</h3>
+        <form action="/" method="post" id="checkout">
+          <button class="button-buy" type="submit">Comprar</button>
+        </form>
+
+        
+          <p class="drink-description">
+            El Aperol es una bebida alcohólica de origen italiano de baja
+            graduación alcohólica, sus ingredientes incluyen naranja amarga,
+            ruibarbo, gentiana, cinchona, entre otros. Aunque sabe y huele muy
+            similar al Campari, el Aperol tiene una graduación alcohólica de
+            11%.
+          </p>
+        
         </section>
+      </section>
     </main>
-    <%- include ('../includes/footer.ejs') %> 
-</body>
+    <%- include ('../includes/footer.ejs') %>
+  </body>
 </html>
