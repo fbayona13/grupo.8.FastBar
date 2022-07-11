@@ -1,0 +1,27 @@
+@media screen and (min-width:1200px) {
+   
+  .full-cathegory{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-start;
+  }
+
+  
+  #drink-picture{
+    width: 45vw;
+
+  }
+  .price{
+    width:100%;
+
+
+  }
+  #checkout{
+    width: 100%;
+
+
+  }
+  .right-section{
+    width:45vw
+  }
+}
