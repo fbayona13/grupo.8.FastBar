@@ -3,79 +3,89 @@
 Logo --> Cambiar logo, esta mal
 
     figuras mas cuadradas
-    mas memorable 
-    la letra tiene que ser mas simple--> Sans Serif 
+    mas memorable
+    la letra tiene que ser mas simple--> Sans Serif
 
-    interletrado--> curvas 
+    interletrado--> curvas
     Ver las tipografias, una para textos y enlaces
 
     (tipografias max3 min2)
     Bebas Neue
     Comfortaa
 
-
-
 Wireframe --> No Va
-    
+
     Sacar todo
         iconos
         tipografias
-        imagenes 
-        
-    esta muy recargado, hay que sacar informacion 
+        imagenes
+
+    esta muy recargado, hay que sacar informacion
     La linea tiene que ir con el header y dejarla por debajo del logo
     Categorias y menu, sacar las categorias (no poner nada) y meterlas en el menu
-    NavBar sacar los elements y poner la categorias 
-    Como usar FastBar --> solo 3 pasos bien aclarados 
-    O ponemos la explicacion de como usar, o lo explicamos en el banner 
-    Sacamos el mapa de ubicacion 
-    Promociones --> lo expresamos como cards en la pantalla principal 
+    NavBar sacar los elements y poner la categorias
+    Como usar FastBar --> solo 3 pasos bien aclarados
+    O ponemos la explicacion de como usar, o lo explicamos en el banner
+    Sacamos el mapa de ubicacion
+    Promociones --> lo expresamos como cards en la pantalla principal
 
-    Footer 
+    Footer
         Logo
-        los datos con alguna informacion 
-        redes sociales 
+        los datos con alguna informacion
+        redes sociales
 
-    Checkout 
+    Checkout
         ubicacion donde retirar el trago
         de un lado remunen informacion los productos con un contador, del otro lado la informacion de la compra
 
             en forma de tile, imagen a la izquierda, nombre, detalles, boton de agregar / eliminar con el contador (abajo del nombre).
-    
-    version mobile --> agregar logos 
 
-[comment]:<modificaciones terminadas>
+    version mobile --> agregar logos
 
+[comment]: <modificaciones terminadas>
 
 # SPRINT 2 (modificaciones)
 
-    Botones de login --> revisar 
-    register --> font-size de los label = muy chicos 
-    height del main --> sacar 
-    img del logo --> conservar en la version mobile 
-    revisar html, mucho codigo al vicio 
+    Botones de login --> revisar
+    register --> font-size de los label = muy chicos
+    height del main --> sacar
+    img del logo --> conservar en la version mobile
+    revisar html, mucho codigo al vicio
 
-    W3C --> validador de html para ver los errores 
+    W3C --> validador de html para ver los errores
     Las imagenes no tienen que tener espacios vacios en el nombre
-    Agregar link del producto hacia el detalle 
-    <figure> --> sacar, mejor <picture> que es mas flexible 
+    Agregar link del producto hacia el detalle
+    <figure> --> sacar, mejor <picture> que es mas flexible
     barra lateral --> hacerlo mejor con CSS
 
-[comment]:<modificaciones no hechas>
+[comment]: <modificaciones no hechas>
 
-# SPRINT 3
+# SPRINT 3 (modificaciones)
 
     Creacion y edicion de productos
 
         id
         nombre
-        precio 
+        precio
         descripcion (ingredientes que lleva)
         imagen
         categoria (tipo de alcohol)
         perfil de sabor
         historia
 
+    MODIFICACIONES:
+        app.use para routes --> app.use ('product', require ('./routes/main.routes'));
+        let {productDetail, newProduct, editProduct} --> en una sola linea
+        router.get --> agrupadas
+        editProduct --> es el mismo formulario que newProduct pero con los inputs premarcados
+
+        article del producto--> lo podemos mandar al include para que tener un modelo parametrizado de productos
+        menu lateral--> cambiar los buttons por <a>
+                        la nav se podria cambiar por un div
+                        los hr los podriamos reemplazar por nav
+        server --> archivo port.js tiene loalhost, en lugar de localhost
+
+[comment]: <modificaciones 1-3 hechas>
 
 # SPRINT 4 (26/06 entrega)
 
@@ -94,5 +104,5 @@ Wireframe --> No Va
         id --> usuarios clientes
         etc
 
-    Modelo para interactuar con los datos 
+    Modelo para interactuar con los datos
     CRUD
