@@ -10,8 +10,8 @@ app.set ('views', path.resolve (__dirname, 'views'));
 app.set ('view engine', 'ejs')
 
 //ruta para Home, Cart
-app.use ('/main', require ('./routes/main.routes'));
+app.use ('/', require ('./routes/main.routes'));
 //ruta para productDetail, Create, Edit
 app.use ('/products' ,require ('./routes/products.routes'));
 //ruta para Register, Login
-app.use ('/user', require ('./routes/user.routes'))
+app.use ('/user', require ('./routes/user.routes'));

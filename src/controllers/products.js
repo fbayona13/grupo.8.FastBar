@@ -1,22 +1,22 @@
 module.exports = {
-  productDetail: (req, res) => {
-    return res.render("products/productDetail", {
+  detail: (req, res) => {
+    return res.render("products/detail", {
       title: "Product Detail",
-      style: "productDetail"
+      style: "productDetail",
     });
   },
 
-  newProduct: (req, res) => {
-    return res.render('products/newProduct', {
-      title: 'New Product',
-      style: 'newProduct'
+  newie: (req, res) => {
+    return res.render("products/new", {
+      title: "New Product",
+      style: "newProduct",
     });
   },
 
-  editProduct: (req, res) => {
-    return res.render('products/editProduct', {
-      title: 'Edit Product',
-      style: 'editProduct'
+  edit: (req, res) => {
+    return res.render("products/edit", {
+      title: "Edit Product",
+      style: "editProduct",
     });
-  }
+  },
 };
