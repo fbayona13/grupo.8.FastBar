@@ -6,15 +6,16 @@
 
     <main>
       <div>
-        <form action="/" method="post">
+        <form action="/products/save" method="post" enctype="multipart/form-data">
           <fieldset class="classNewDrink">
             <label for="name">Nombre del trago</label>
             <input
               type="text"
-              name="name"
-              id="name"
+              name="drinkName"
+              id="drinkName"
               placeholder="nombre del trago"
               required
+              autocomplete="off"
             />
           </fieldset>
           <fieldset class="classNewDrink">
@@ -25,6 +26,7 @@
               id="precio"
               placeholder="precio"
               required
+              autocomplete="off"
             />
           </fieldset>
           <fieldset class="classNewDrink">
@@ -36,6 +38,7 @@
               placeholder="lista de ingedientes, no es necesario cantidades (200)"
               maxlength="200"
               required
+              autocomplete="off"
             />
           </fieldset>
           <fieldset class="classNewDrink">
@@ -51,7 +54,7 @@
           </fieldset>
           <fieldset class="classNewDrink">
             <label for="">Categoria</label>
-            <select name="categorias" id="categorias">
+            <select name="categorias" id="categorias" required>
               <option value="">--Elegir una categoria--</option>
               <option value="categoria1">categoria1</option>
               <option value="categoria2">categoria2</option>
@@ -69,6 +72,7 @@
               placeholder="describa brevemente el sabor del trago (200)"
               maxlength="200"
               required
+              autocomplete="off"
             />
           </fieldset>
           <fieldset class="classNewDrink">
@@ -79,11 +83,16 @@
               id="historia"
               placeholder="nos podes contar de donde viene el trago, o quien lo hizo! (200)"
               maxlength="200"
+              autocomplete="off"
             />
           </fieldset>
           <fieldset class="fieldsetHabemusPotio">
-            <button type="reset" class="buttonHabemusPotio"><i class="fa-solid fa-trash"></i></button>
-            <button type="submit" class="buttonHabemusPotio">HABEMUS POTIO!</button>
+            <button type="reset" class="buttonHabemusPotio">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+            <button type="submit" class="buttonHabemusPotio">
+              HABEMUS POTIO!
+            </button>
           </fieldset>
         </form>
       </div>

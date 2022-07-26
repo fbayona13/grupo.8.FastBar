@@ -11,238 +11,53 @@
 
       <h3>Favorites</h3>
       <section class="productSection">
+        <% favoritesProducts.forEach(product => { %>
         <article class="productArticle">
           <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/Caipiroska.jpeg"
-                alt=""
-                class="productImg"
-              />
+            <a href="products/detail/<%= product.id%>">
+              <img src="<%= product.image%> " alt="" class="productImg" />
             </a>
           </picture>
           <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Caipiroska</h5>
-            <p class="productPrecioP">$600</p>
+            <h5 class="productNombreH5"><%= product.drinkName%></h5>
+            <p class="productPrecioP">$<%= product.price%></p>
           </section>
         </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/Hurricane.jpeg"
-                alt=""
-                class="productImg"
-              />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Hurricane</h5>
-            <p class="productPrecioP">$750</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/CosmopolitanModerno.jpeg"
-                alt=""
-                class="productImg"
-              />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Cosmopolitan Moderno</h5>
-            <p class="productPrecioP">$850</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/CucumberCollins.jpeg"
-                alt=""
-                class="productImg"
-              />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Cucumber Collins</h5>
-            <p class="productPrecioP">$600</p>
-          </section>
-        </article>
+        <% }) %>
       </section>
 
       <h3>Top Selection</h3>
       <section class="productSection">
+        <% topSelectionProducts.forEach(product => { %>
         <article class="productArticle">
           <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/Coconextion.jpeg"
-                alt=""
-                class="productImg"
-              />
+            <a href="products/detail/<%= product.id%>">
+              <img src="<%= product.image%> " alt="" class="productImg" />
             </a>
           </picture>
           <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Coconextion</h5>
-            <p class="productPrecioP">$850</p>
+            <h5 class="productNombreH5"><%= product.drinkName%></h5>
+            <p class="productPrecioP">$<%= product.price%></p>
           </section>
         </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/Chilito.jpeg"
-                alt=""
-                class="productImg"
-              />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Chilito</h5>
-            <p class="productPrecioP">$750</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img src="/assets/Images/Idilio.jpeg" alt="" class="productImg" />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Idilio</h5>
-            <p class="productPrecioP">$750</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img src="/assets/Images/Piroco.jpeg" alt="" class="productImg" />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Piroco</h5>
-            <p class="productPrecioP">$850</p>
-          </section>
-        </article>
+        <% }) %>
       </section>
 
       <h3>All</h3>
       <section class="productSection">
+        <% allProducts.forEach(product => { %>
         <article class="productArticle">
           <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/Caipiroska.jpeg"
-                alt=""
-                class="productImg"
-              />
+            <a href="products/detail/<%= product.id %>">
+              <img src="<%= product.image %>" alt="" class="productImg" />
             </a>
           </picture>
           <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Caipiroska</h5>
-            <p class="productPrecioP">$600</p>
+            <h5 class="productNombreH5"><%= product.drinkName%></h5>
+            <p class="productPrecioP">$<%= product.price%></p>
           </section>
         </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/Hurricane.jpeg"
-                alt=""
-                class="productImg"
-              />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Hurricane</h5>
-            <p class="productPrecioP">$750</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/CosmopolitanModerno.jpeg"
-                alt=""
-                class="productImg"
-              />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Cosmopolitan Moderno</h5>
-            <p class="productPrecioP">$850</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/CucumberCollins.jpeg"
-                alt=""
-                class="productImg"
-              />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Cucumber Collins</h5>
-            <p class="productPrecioP">$600</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/Coconextion.jpeg"
-                alt=""
-                class="productImg"
-              />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Coconextion</h5>
-            <p class="productPrecioP">$850</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img
-                src="/assets/Images/Chilito.jpeg"
-                alt=""
-                class="productImg"
-              />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Chilito</h5>
-            <p class="productPrecioP">$750</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img src="/assets/Images/Idilio.jpeg" alt="" class="productImg" />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Idilio</h5>
-            <p class="productPrecioP">$750</p>
-          </section>
-        </article>
-        <article class="productArticle">
-          <picture>
-            <a href="/detail">
-              <img src="/assets/Images/Piroco.jpeg" alt="" class="productImg" />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5">Piroco</h5>
-            <p class="productPrecioP">$850</p>
-          </section>
-        </article>
+        <% }) %>
       </section>
     </main>
     <%- include ('./includes/footer.ejs') %>

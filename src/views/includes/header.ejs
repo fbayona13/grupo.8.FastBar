@@ -2,27 +2,28 @@
   <section id="lateralNavBar">
     <a href="#lateralMenu"><i class="fa-solid fa-bars" id="navbar"></i></a>
   </section>
-  <nav id="lateralMenu">
-    <hr />
-    <div>
-      <button><i class="fa-solid fa-cart-shopping icono"></i></button>
-      <button><i class="fa-solid fa-user icono"></i></button>
-    </div>
-    <hr />
-    <a href="/">categoria 1</a>
-    <a href="/">categoria 2</a>
-    <a href="/">categoria 3</a>
-    <a href="/">categoria 4</a>
-    <a href="/">categoria 5</a>
-    <hr>
-    <a href="products/new">nuevo trago</a>
-    <a href="products/edit">edit trago</a>
-    <a href="products/detail">Product Detail</a>
-    <hr />
-    <a href="#">Cerrar</a>
-  </nav>
+  <div id="lateralMenu">
+    <nav>
+      <a href="/cart"><i class="fa-solid fa-cart-shopping icono"></i></a>
+      <a href="user/login"><i class="fa-solid fa-user icono"></i></a>
+    </nav>
+    <nav>
+      <a href="/">categoria 1</a>
+      <a href="/">categoria 2</a>
+      <a href="/">categoria 3</a>
+      <a href="/">categoria 4</a>
+      <a href="/">categoria 5</a>
+    </nav>
+    <nav>
+      <a href="products/new">Crear Trago</a>
+    </nav>
+    <nav>
+      <a href="#">Cerrar</a>
+    </nav>
+  </div>
 
-  <form action="/" method="get" id="searchBarForm">
+  <!--req.query.searchBar-->
+  <form action="/products/search" method="get" id="searchBarForm">
     <fieldset id="searchBarFieldset">
       <input
         type="search"
@@ -30,7 +31,7 @@
         id="searchBar"
         placeholder="Buscar tragos por nombre, bar, o espirituosa..."
       />
-      <button id="searchBarButton">
+      <button type="submit" id="searchBarButton">
         <i class="fa-solid fa-search"></i>
       </button>
     </fieldset>

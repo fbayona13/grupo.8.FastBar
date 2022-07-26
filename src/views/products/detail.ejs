@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include ('../includes/head.ejs') %>
-  
 
   <body>
     <%- include ('../includes/header.ejs') %>
     <main>
       <section class="full-cathegory">
-        <h2 class="drink">Aperol Spritz</h2>
+        <h2 class="drink"><%= product.drinkName%></h2>
 
         <figure id="drink-picture">
           <img
-            src="assets/Images/AperolSpritz.jpeg"
+            src="/products/<%= product.image%>"
             width="100%"
             class="imagen-trago"
           />
         </figure>
-        <section class="right-section">
-        <h3 class="price">$650</h3>
-        <form action="/" method="post" id="checkout">
-          <button class="button-buy" type="submit">Comprar</button>
-        </form>
 
-        
-          <p class="drink-description">
-            El Aperol es una bebida alcohólica de origen italiano de baja
-            graduación alcohólica, sus ingredientes incluyen naranja amarga,
-            ruibarbo, gentiana, cinchona, entre otros. Aunque sabe y huele muy
-            similar al Campari, el Aperol tiene una graduación alcohólica de
-            11%.
-          </p>
-        
+        <section class="right-section">
+          <h3 class="price">$<%= product.price%></h3>
+          <form action="/" method="post" id="checkout">
+            <button class="button-buy" type="submit">Comprar</button>
+          </form>
+
+          <p class="drink-description"><%= product.creator%></p>
+          <p class="drink-description"><%= product.description%></p>
+          <p class="drink-description"><%= product.flavorProfile%></p>
+          <p class="drink-description"><%= product.history%></p>
         </section>
       </section>
     </main>

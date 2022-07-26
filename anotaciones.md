@@ -106,3 +106,5 @@ Wireframe --> No Va
 
     Modelo para interactuar con los datos
     CRUD
+
+01:31:00
