@@ -42,7 +42,7 @@ Wireframe --> No Va
 
     version mobile --> agregar logos
 
-[comment]: <modificaciones terminadas>
+[comment]: <modificaciones hechas>
 
 # SPRINT 2 (modificaciones)
 
@@ -93,16 +93,27 @@ Wireframe --> No Va
 
         id --> producto
         estado (true, false --> que el bar pueda o no hacer el trago)
+        topSelection
+        Favoritos
+        descuento
         nombre
         precio
         descripcion
         imagen
         categoria
         perfil de sabor
+        creador
         historia
 
         id --> usuarios clientes
-        etc
+        nombre
+        credenciales --> 1 admin 2 vendedor 3 cliente normal
+        nivel --> 1 - 100
+        email
+        descripcion 
+        contrasena
 
     Modelo para interactuar con los datos
     CRUD
+
+[comment]: <modificaciones por verse>
