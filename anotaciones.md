@@ -116,4 +116,4 @@ Wireframe --> No Va
     Modelo para interactuar con los datos
     CRUD
 
-[comment]: <modificaciones por verse>
+[comment]: <modificaciones por verse> <problemas con la subida de datos a git>
