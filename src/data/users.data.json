@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Randy Downage",
+    "credentials": 2,
+    "level": 1,
+    "email": "rdownage0@stumbleupon.com",
+    "description": "dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat",
+    "image": "http://dummyimage.com/232x100.png/dddddd/000000",
+    "password": "7CiM4Xz9"
+  },
+  {
+    "id": 2,
+    "name": "Arly L' Anglois",
+    "credentials": 3,
+    "level": 26,
+    "email": "al1@squidoo.com",
+    "description": "congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis",
+    "image": "http://dummyimage.com/157x100.png/5fa2dd/ffffff",
+    "password": "BSmBz4X"
+  },
+  {
+    "id": 3,
+    "name": "Bernita Mayho",
+    "credentials": 2,
+    "level": 92,
+    "email": "bmayho2@phpbb.com",
+    "description": "luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a",
+    "image": "http://dummyimage.com/103x100.png/ff4444/ffffff",
+    "password": "SPKeRKx"
+  },
+  {
+    "id": 4,
+    "name": "Nikolai Andrus",
+    "credentials": 1,
+    "level": 8,
+    "email": "nandrus3@kickstarter.com",
+    "description": "nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in",
+    "image": "http://dummyimage.com/226x100.png/ff4444/ffffff",
+    "password": "BrthCwJ2zn"
+  },
+  {
+    "id": 5,
+    "name": "Torrey Keaveny",
+    "credentials": 2,
+    "level": 19,
+    "email": "tkeaveny4@admin.ch",
+    "description": "magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
+    "image": "http://dummyimage.com/168x100.png/5fa2dd/ffffff",
+    "password": "EI0vZI6bgSV"
+  }
+]

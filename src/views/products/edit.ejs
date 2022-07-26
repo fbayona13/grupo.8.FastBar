@@ -6,15 +6,17 @@
 
     <main>
       <div>
-        <form action="/" method="post">
+        <form action="/products/edit/<%= product.image%>?_method=PUT" method="post" enctype="multipart/form-data">
           <fieldset class="classNewDrink">
             <label for="name">Nombre del trago</label>
             <input
               type="text"
-              name="name"
-              id="name"
+              name="drinkName"
+              id="drinkName"
               placeholder="nombre del trago"
               required
+              autocomplete="off"
+              value="<%= product.drinkName %>"
             />
           </fieldset>
           <fieldset class="classNewDrink">
@@ -25,18 +27,19 @@
               id="precio"
               placeholder="precio"
               required
+              autocomplete="off"
+              value="<%= product.price%>"
             />
           </fieldset>
           <fieldset class="classNewDrink">
             <label for="">Ingredientes</label>
-            <input
-              type="textarea"
+            <textarea
               name="ingredientes"
               id="ingredientes"
               placeholder="lista de ingedientes, no es necesario cantidades (200)"
               maxlength="200"
               required
-            />
+              autocomplete="off"><%= product.description%> </textarea>
           </fieldset>
           <fieldset class="classNewDrink">
             <label for="">Imagen</label>
@@ -51,7 +54,7 @@
           </fieldset>
           <fieldset class="classNewDrink">
             <label for="">Categoria</label>
-            <select name="categorias" id="categorias">
+            <select name="categorias" id="categorias" required>
               <option value="">--Elegir una categoria--</option>
               <option value="categoria1">categoria1</option>
               <option value="categoria2">categoria2</option>
@@ -62,28 +65,27 @@
           </fieldset>
           <fieldset class="classNewDrink">
             <label for="">Perfil de sabor</label>
-            <input
-              type="textarea"
+            <textarea
               name="sabor"
               id="sabor"
               placeholder="describa brevemente el sabor del trago (200)"
               maxlength="200"
               required
-            />
+              autocomplete="off"><%= product.flavorProfile%> </textarea>
           </fieldset>
           <fieldset class="classNewDrink">
             <label for="">Breve historia (opcional)</label>
-            <input
-              type="textarea"
+            <textarea
               name="historia"
               id="historia"
               placeholder="nos podes contar de donde viene el trago, o quien lo hizo! (200)"
               maxlength="200"
-            />
+              autocomplete="off"><%= product.history%> </textarea>
           </fieldset>
           <fieldset class="fieldsetHabemusPotio">
-            <button type="reset" class="buttonHabemusPotio"><i class="fa-solid fa-trash"></i></button>
-            <button type="submit" class="buttonHabemusPotio">HABEMUS POTIO!</button>
+            <button type="submit" class="buttonHabemusPotio">
+              EDITAR!
+            </button>
           </fieldset>
         </form>
       </div>

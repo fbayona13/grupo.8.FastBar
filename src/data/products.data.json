@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "state": true,
+    "topSelection": true,
+    "favorites": false,
+    "discount": 0,
+    "drinkName": "Cuba Libre",
+    "price": 97,
+    "description": "donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci",
+    "image": "http://dummyimage.com/154x231.png/cc0000/ffffff",
+    "category": "Ron",
+    "flavorProfile": "habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante",
+    "creator": "Un bar o usuario",
+    "history": "nullam orci pede venenatis non sodales sed tincidunt eu felis fusce"
+  },
+  {
+    "id": 2,
+    "state": true,
+    "topSelection": false,
+    "favorites": true,
+    "discount": 0,
+    "drinkName": "Caipi Patagonica",
+    "price": 30,
+    "description": "donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci",
+    "image": "http://dummyimage.com/154x231.png/cc0000/ffffff",
+    "category": "Ron",
+    "flavorProfile": "habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante",
+    "creator": "Un bar o usuario",
+    "history": "nullam orci pede venenatis non sodales sed tincidunt eu felis fusce"
+  },
+  {
+    "id": 3,
+    "state": true,
+    "topSelection": true,
+    "favorites": true,
+    "discount": 0,
+    "drinkName": "Loretta",
+    "price": 53,
+    "description": "donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci",
+    "image": "http://dummyimage.com/154x231.png/cc0000/ffffff",
+    "category": "Ron",
+    "flavorProfile": "habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante",
+    "creator": "Un bar o usuario",
+    "history": "nullam orci pede venenatis non sodales sed tincidunt eu felis fusce"
+  },
+  {
+    "id": 4,
+    "state": true,
+    "topSelection": false,
+    "favorites": false,
+    "discount": 0,
+    "drinkName": "Markington",
+    "price": 12,
+    "description": "donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci",
+    "image": "http://dummyimage.com/154x231.png/cc0000/ffffff",
+    "category": "Ron",
+    "flavorProfile": "habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante",
+    "creator": "Un bar o usuario",
+    "history": "nullam orci pede venenatis non sodales sed tincidunt eu felis fusce"
+  }
+]

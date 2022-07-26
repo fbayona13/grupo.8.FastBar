@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../includes/head.ejs') %> 
+  <body>
+    <%- include ('../includes/header.ejs') %> 
+    
+    <h2>Aca va una lista de todos los productos</h2>
+    <% users.forEach(user => { %>
+    <li>
+      <picture>
+        <a href="">
+          <img src="<%= user.image%>" alt="" />
+        </a>
+      </picture>
+      <section>
+        <h5><%= user.name%></h5>
+        <p>ID: <%= user.id%></p>
+        <p>Email: <%= user.email%></p>
+        <p>Credenciales: <%= user.credentials%></p>
+        <p>Nivel: <%= user.level%></p>
+      </section>
+    </li>
+    <% }) %>
+
+    <%- include ('../includes/footer.ejs') %> 
+  </body>
+</html>

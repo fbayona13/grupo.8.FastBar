@@ -44,22 +44,21 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 
   visibility: hidden;
 }
 
-nav#lateralMenu a {
+div#lateralMenu nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+div#lateralMenu nav a {
   text-decoration: none;
   color: snow;
-}
-
-nav#lateralMenu hr {
-  width: 80%;
-  color: snow;
-}
-
-nav#lateralMenu button {
   background-color: hsl(0, 0%, 0%);
   font-size: 1rem;
   margin: 0 1rem;

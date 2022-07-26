@@ -1,46 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('../includes/head.ejs') %> 
-<body>
-
-    
-<%- include ('../includes/header.ejs') %> 
-    <main class="login">
-<div class="container">
-   <h6>Para continuar, ingresá con tu cuenta.</h6>
-
-   <form action="/" method="POST">
-            <div class="form__group form__div">
-                <span><i class="fa-solid fa-envelope"></i></span>
-                <input class="campo" type="email" placeholder="Correo electrónico:">
-            </div>
-            
-            <div class="form__group form__div">
-                <span><i class="fa-solid fa-lock"></i></span>
-                <input class="campo" type="password" placeholder="Contraseña:">
-            </div>
-            <div class="form__group"></div>   
-                 
-                <button type="submit">Acceso</button>
-            </div>   
-            <div class="form__group__enlace"></div>   
-                 
-            <a class="enlace" href="¿No tenés una cuenta? Registrate GRATIS"></a>
-            <a class="enlace" href="Te olvidaste la constraseña?"></a>
-           
-        </div>  
-        
+  <%- include ('../includes/head.ejs') %>
+  <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0"
+      nonce="XKreD7F2"
+    ></script>
+    <%- include ('../includes/header.ejs') %>
+    <main>
+      <div class="loginDiv">
+        <h4>Si alcohol deseas conseguir, a la comunidad te debes unir</h4>
+        <form action="/" method="post" class="formularioLogin">
+          <fielset class="fieldsetLogin">
+            <label class="labelLogin" for="email">Email: </label>
+            <input
+              class="inputRegister"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Introduzca aqui su email"
+              required
+            />
+          </fielset>
+          <fielset class="fieldsetLogin">
+            <label class="labelLogin" for="contrasena">Contrasena: </label>
+            <input
+              class="inputLogin"
+              type="password"
+              name="contrasena"
+              id="constrasena"
+              required
+            />
+          </fielset>
+          <fielset class="fieldsetButton">
+            <button type="submit" class="loginButton">LOG IN</button>
+          </fielset>
         </form>
-<hr>
-<p>Inicia sesión con:</p>
-<div class="div__group"></div> 
-<a href="#"><i class="fa-brands fa-google"></i></a>
-<a href="#"><i class="fa-brands fa-facebook"></i></a>
-<a href="/register">O registrate aca</a>
-</div>   
-        
-</div>
+
+        <!--Botones de logearse FACEBOOK Y GOOGLE-->
+        <div class="socialButtons">
+          <div
+            class="fb-login-button"
+            data-width="191"
+            data-size="medium"
+            data-button-type="login_with"
+            data-layout="default"
+            data-auto-logout-link="false"
+            data-use-continue-as="false"
+          ></div>
+
+          <div id="my-signin2"></div>
+          <script>
+            function onSuccess(googleUser) {
+              console.log(
+                "Logged in as: " + googleUser.getBasicProfile().getName()
+              );
+            }
+            function onFailure(error) {
+              console.log(error);
+            }
+            function renderButton() {
+              gapi.signin2.render("my-signin2", {
+                scope: "profile email",
+                width: 191,
+                height: 30,
+                longtitle: true,
+                theme: "dark",
+                onsuccess: onSuccess,
+                onfailure: onFailure,
+              });
+            }
+          </script>
+
+          <script
+            src="https://apis.google.com/js/platform.js?onload=renderButton"
+            async
+            defer
+          ></script>
+        </div>
+
+        <h5>
+          No estas registrado?
+          <a href="user/register">Ven al lado divertido de la fiesta</a>
+        </h5>
+      </div>
     </main>
-    <%- include ('../includes/footer.ejs') %> 
-</body>
+    <%- include ('../includes/footer.ejs') %>
+  </body>
 </html>
