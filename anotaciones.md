@@ -85,7 +85,7 @@ Wireframe --> No Va
                         los hr los podriamos reemplazar por nav
         server --> archivo port.js tiene loalhost, en lugar de localhost
 
-[comment]: <modificaciones 1-3 / 7 hechas>
+[comment]: <modificaciones hechas>
 
 # SPRINT 4 (26/06 entrega)
 
@@ -106,5 +106,3 @@ Wireframe --> No Va
 
     Modelo para interactuar con los datos
     CRUD
-
-01:31:00
