@@ -2,7 +2,7 @@ const { Router } = require("express");
 const multer = require("multer");
 const router = Router();
 const storage = require("../modules/storage");
-const upload = multer({ storage: storage('productsImages') });
+const upload = multer({ storage: storage("productsImages") });
 
 const {
   index,
@@ -29,8 +29,6 @@ router.post("/save", [upload.any()], save);
 
 //Para acceder a la info del formulario edit.ejs y editar un producto de la DB
 router.get("/edit/:id", edit);
-router.put('/edit/:id', [upload.any()], modify);
-
-
+router.put("/edit/:id", [upload.any()], modify);
 
 module.exports = router;

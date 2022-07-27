@@ -1,22 +1,18 @@
 const { extname } = require("path");
 const { diskStorage } = require("multer");
-
-//El destino de donde se va a guardar el archivo
-let destination = (folder) => (req, file, callback) =>
-  callback(null, "./uploads/" + folder);
-
-//Con que nombre vamos a guardar el archivo
-let filename = (req, file, callback) => {
-  const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-  return callback(
-    null,
-    file.filename + "-" + uniqueSuffix + extname(file.originalname)
-  );
+let destination = function (folder) {
+  return (req, file, callback) => callback(null, "./uploads/" + folder);
 };
 
-//diskStorage es una funcion de Multer que nos permite guardar los archivos en el disco
-const storage = (folder) => {
-  diskStorage({
+let filename = (req, file, callback) => {
+  const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+  callback(
+    null,
+    file.fieldname + "-" + uniqueSuffix + extname(file.originalname)
+  );
+};
+const storage = function (folder) {
+  return diskStorage({
     destination: destination(folder),
     filename: filename,
   });

@@ -87,7 +87,7 @@ Wireframe --> No Va
 
 [comment]: <modificaciones hechas>
 
-# SPRINT 4 (26/06 entrega)
+# SPRINT 4 (26/07 entrega)
 
     Base de datos en JSON para products y usuarios
 
@@ -117,3 +117,10 @@ Wireframe --> No Va
     CRUD
 
 [comment]: <modificaciones por verse> <problemas con la subida de datos a git>
+
+# SPRINT 5 (09/08 entrega)
+
+subir imagen del perfil --> opcional
+
+funcion recordar el usuario --> opcional pero recomendable
+    cookie --> guarda el correo y con un middleware de logeo

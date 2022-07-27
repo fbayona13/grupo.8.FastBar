@@ -9,7 +9,7 @@
     <li>
       <picture>
         <a href="">
-          <img src="<%= product.image%>" alt="" />
+          <img src="/productsImages/<%= product.image%>" alt="" />
         </a>
       </picture>
       <section>
@@ -21,8 +21,6 @@
         <p>Historia: <%= product.history%></p>
       </section>
     </li>
-    <% }) %>
-    
-  <%- include ('../includes/footer.ejs') %>
+    <% }) %> <%- include ('../includes/footer.ejs') %>
   </body>
 </html>

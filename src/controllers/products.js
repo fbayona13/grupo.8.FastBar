@@ -110,7 +110,8 @@ module.exports = {
       if (p.id == product.id) {
         p.drinkName = req.body.drinkName;
         p.price = parseInt(req.body.price);
-        p.image = req.files && req.files.length > 0 ? req.files[0].filename : p.image;
+        p.image =
+          req.files && req.files.length > 0 ? req.files[0].filename : p.image;
         p.description = req.body.description;
         p.flavorProfile = req.body.flavorProfile;
         p.history = req.body.history;
