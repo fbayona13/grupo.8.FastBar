@@ -42,7 +42,7 @@ Wireframe --> No Va
 
     version mobile --> agregar logos
 
-[comment]: <modificaciones hechas>
+[comment]: modificaciones hechas
 
 # SPRINT 2 (modificaciones)
 
@@ -58,7 +58,7 @@ Wireframe --> No Va
     <figure> --> sacar, mejor <picture> que es mas flexible
     barra lateral --> hacerlo mejor con CSS
 
-[comment]: <modificaciones no hechas>
+[comment]: modificaciones hechas
 
 # SPRINT 3 (modificaciones)
 
@@ -85,7 +85,7 @@ Wireframe --> No Va
                         los hr los podriamos reemplazar por nav
         server --> archivo port.js tiene loalhost, en lugar de localhost
 
-[comment]: <modificaciones hechas>
+[comment]: modificaciones hechas
 
 # SPRINT 4 (26/07 entrega)
 
@@ -116,7 +116,19 @@ Wireframe --> No Va
     Modelo para interactuar con los datos
     CRUD
 
-[comment]: <modificaciones por verse> <problemas con la subida de datos a git>
+[comment]: problemas con la subida de datos a git
+
+# SPRINT 4 (modificaciones)
+
+    Plataforma--> categorias
+        let categorias = indexProducts.map(p => p.category).filter((cat, index, array) => !array.include(cat));
+        en google: eliminar elementos repetidos 
+        ruta : products/category/vodka 
+        select del newProduct --> agregarlo con la logica de arriba
+
+    Detalles: faltan botones de edit, y eliminar que despues con session para mostrarlo o no
+
+[comment]: modificaciones pendientes
 
 # SPRINT 5 (09/08 entrega)
 
