@@ -1,6 +1,12 @@
-const { indexUsers } = require("../models/users.model");
+const { 
+  indexUsers, 
+  oneUser,
+  create, 
+  write, 
+} = require("../models/users.model");
 
 module.exports = {
+  
   //Va a mostrar una lista con todos los usuarios
   index: (req, res) => {
     return res.render("user/index", {
@@ -26,5 +32,91 @@ module.exports = {
       title: "Register",
       style: "register",
     });
+  },
+
+
+    //Para crear y guardar nuevo usuario en la DB
+  save: (req, res) => {
+    req.body.image = req.files[0].filename;
+    let newUser = create(req.body);
+    let users = indexUsers();
+    users.push(newUser);
+    write(users);
+
+    return res.redirect("/login/");
+  },
+
+
+
+  //Para mostrar el detalle de cada producto
+  detail: (req, res) => {
+    let user = oneUser(parseInt(req.params.id));
+    if (!user) {
+      return res.redirect("/user/");
+    }
+
+    return res.render("user/detail", {
+      // head.ejs
+      title: "User Detail",
+      style: "userDetail",
+
+      user: user,
+    });
+  },
+
+  
+
+
+  //Para editar y modificar usuarios de la DB
+  edit: (req, res) => {
+    let user = oneUser(parseInt(req.params.id));
+    if (!user) {
+      return res.redirect("/users/");
+    }
+
+    return res.render("users/edit", {
+      // head.ejs
+      title: "Edit User",
+      style: "editUser",
+
+      user:user,
+    });
+  },
+
+  modify: (req, res) => {
+    let user = oneUser(parseInt(req.params.id));
+    let users = indexUsers();
+    let userModified = users.map((p) => {
+      if (p.id == product.id) {
+        p.userName= req.body.userName;
+        p.image =
+          req.files && req.files.length > 0 ? req.files[0].filename : p.image;
+        p.description = req.body.description;
+        p.email= req.body.email
+        p.password= req.body.password
+        p.level= req.body.level
+        p.credentials= req.body.credentials
+       //Revisar el p.credentials, p.level, p.email y p.password
+      }
+
+      return p;
+    });
+    write(userModified);
+
+    return res.redirect("/user" + product.id);
+  },
+
+    //Para eliminar un producto de la DB
+  destroy: (req, res) => {
+    let users = indexUsers();
+    let user = oneUser(parseInt(req.params.id));
+    if (!user) {
+      return res.redirect("/users/");
+    }
+
+    let userDeleted = users.filter((p) => p.id !== req.params.id);
+    write(userDeleted);
+
+    return res.redirect("/login/");
   },
 };

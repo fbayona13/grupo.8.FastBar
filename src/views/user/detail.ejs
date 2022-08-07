@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('../includes/head.ejs') %>
+
+  <body>
+    <%- include ('../includes/header.ejs') %>
+    <main>
+        
+        <section class="full-cathegory">
+        
+            <section class="left-section">
+            <figure id="user-picture">
+              <img
+                src="/users/<%= user.image%>"
+                width="100%"
+                class="user-image"
+              />
+            </figure>
+             </section>
+    
+            <section class="right-section">
+                
+                    
+                        <fielset class="fieldsetRegister">
+                            <label class="labelRegister" for="campoNombreApellido">Nombre y Apellido: </label>
+                            <input class="inputRegister" type="text" name="campoNombreApellido" id="campoNombreApellido" value="<%= user.name %>"  >
+                        </fielset>
+                        
+                        <fielset class="fieldsetRegister">
+                            <label class="labelRegister" for="">Email: </label>
+                            <input class="inputRegister" type="email" name="campoEmail" id="campoEmail" value=<%= user.email %>  >
+                        </fielset>
+                        <fielset class="fieldsetRegister">
+                            <label class="labelRegister" for="">Credenciales: </label>
+                            <input class="inputRegister" type="email" name="campoEmail" id="campoEmail" value=<%= user.credentials %>  >
+                        </fielset>
+                        <fielset class="fieldsetRegister">
+                            <label class="labelRegister" for="">Nivel: </label>
+                            <input class="inputRegister" type="email" name="campoEmail" id="campoEmail" value=<%= user.level %>  >
+                        </fielset>
+                        <a href="/edit" class="button-edit">
+                            <button  type="submit">Editar</button>
+                        </a>
+                        
+                    
+            </section>
+          </section>
+    </main>
+    <%- include ('../includes/footer.ejs') %>
+  </body>
+</html>

@@ -30,7 +30,7 @@
                 <form action="/user/save" method="post" class="formularioRegister" enctype="multipart/form-data">
                     <fielset class="fieldsetRegister">
                         <label class="labelRegister" for="campoNombreApellido">Nombre y Apellido: </label>
-                        <input class="inputRegister" type="text" name="campoNombreApellido" id="campoNombreApellido" placeholder="Introduzca aqui su nombre y apellido" required>
+                        <input class="inputRegister" type="text" name="campoNombreApellido" id="campoNombreApellido"  value="<%=user.name  %> " placeholder="Introduzca aqui su nombre y apellido" required>
                     </fielset>
                     <fielset class="fieldsetRegister">
                         <label class="labelRegister" for="campoNombreUsuario">Nombre de usuario (ID): </label>
