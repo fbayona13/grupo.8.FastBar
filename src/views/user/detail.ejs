@@ -20,28 +20,26 @@
     
             <section class="right-section">
                 
-                    
-                        <fielset class="fieldsetRegister">
+                    <form class="form-register">
+                        <fieldset class="fieldsetRegister">
                             <label class="labelRegister" for="campoNombreApellido">Nombre y Apellido: </label>
                             <input class="inputRegister" type="text" name="campoNombreApellido" id="campoNombreApellido" value="<%= user.name %>"  >
-                        </fielset>
+                        </fieldset>
                         
-                        <fielset class="fieldsetRegister">
+                        <fieldset class="fieldsetRegister">
                             <label class="labelRegister" for="">Email: </label>
                             <input class="inputRegister" type="email" name="campoEmail" id="campoEmail" value=<%= user.email %>  >
-                        </fielset>
-                        <fielset class="fieldsetRegister">
+                        </fieldset>
+                        <fieldset class="fieldsetRegister">
                             <label class="labelRegister" for="">Credenciales: </label>
                             <input class="inputRegister" type="email" name="campoEmail" id="campoEmail" value=<%= user.credentials %>  >
                         </fielset>
-                        <fielset class="fieldsetRegister">
+                        <fieldset class="fieldsetRegister">
                             <label class="labelRegister" for="">Nivel: </label>
                             <input class="inputRegister" type="email" name="campoEmail" id="campoEmail" value=<%= user.level %>  >
-                        </fielset>
-                        <a href="/edit" class="button-edit">
-                            <button  type="submit">Editar</button>
-                        </a>
-                        
+                        </fieldset>
+                    </form>
+                    <button  class="button-edit" type="submit"><a href="/user/edit" >Editar</a></button>
                     
             </section>
           </section>

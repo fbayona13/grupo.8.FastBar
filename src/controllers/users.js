@@ -18,14 +18,6 @@ module.exports = {
     });
   },
 
-  login: (req, res) => {
-    return res.render("user/login", {
-      // head.ejs
-      title: "Login",
-      style: "login",
-    });
-  },
-
   register: (req, res) => {
     return res.render("user/register", {
       // head.ejs
@@ -33,6 +25,7 @@ module.exports = {
       style: "register",
     });
   },
+
 
 
     //Para crear y guardar nuevo usuario en la DB
@@ -43,7 +36,15 @@ module.exports = {
     users.push(newUser);
     write(users);
 
-    return res.redirect("/login/");
+    return res.redirect("user/login");
+  },
+
+  login: (req, res) => {
+    return res.render("user/login", {
+      // head.ejs
+      title: "Login",
+      style: "login",
+    });
   },
 
 
@@ -83,7 +84,7 @@ module.exports = {
     });
   },
 
-  modify: (req, res) => {
+   modify: (req, res) => {
     let user = oneUser(parseInt(req.params.id));
     let users = indexUsers();
     let userModified = users.map((p) => {
@@ -101,10 +102,12 @@ module.exports = {
 
       return p;
     });
+    
     write(userModified);
 
-    return res.redirect("/user" + product.id);
+    return res.redirect("/user" + user.id);
   },
+  
 
     //Para eliminar un producto de la DB
   destroy: (req, res) => {
