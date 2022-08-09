@@ -5,6 +5,8 @@ const {
   write, 
 } = require("../models/users.model");
 
+const validationResult = require ('express-validator')
+
 module.exports = {
   //Va a mostrar una lista con todos los usuarios
   index: (req, res) => {
@@ -24,6 +26,29 @@ module.exports = {
       title: "Register",
       style: "register",
     });
+  },
+
+  //
+  process: (req,res)=>{
+    let validations = validationResult(req)
+    let {errors} = validations
+    if (errors && errors.length > 0){
+      return res.render("user/register", {
+        
+        title: "Register",
+        style: "register",
+        oldData: req.body,
+        errors: validations.mapped()
+      })
+    }
+    
+    req.body.image = req.files[0].filename;
+    let newUser = create(req.body);
+    let users = indexUsers();
+    users.push(newUser);
+    write(users);
+
+    return res.redirect('/user/login?msg"El registro fue exitoso"')
   },
 
   save: (req, res) => {

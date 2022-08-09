@@ -53,9 +53,7 @@
 
 }
 
-.button{
-  margin-top: 2px;
-}
+
 
 @media screen and (min-width: 790px){
 .form-register{
@@ -72,9 +70,10 @@
       flex-direction: column;
 }
 
-.button-edit{
+.button{
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 10%;
 }
   }
