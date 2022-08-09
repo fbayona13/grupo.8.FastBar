@@ -6,7 +6,6 @@ const {
 } = require("../models/users.model");
 
 module.exports = {
-  
   //Va a mostrar una lista con todos los usuarios
   index: (req, res) => {
     return res.render("user/index", {
@@ -18,6 +17,7 @@ module.exports = {
     });
   },
 
+  //Para crear y guardar nuevo usuario en la DB
   register: (req, res) => {
     return res.render("user/register", {
       // head.ejs
@@ -26,17 +26,15 @@ module.exports = {
     });
   },
 
-
-
-    //Para crear y guardar nuevo usuario en la DB
   save: (req, res) => {
+
     req.body.image = req.files[0].filename;
     let newUser = create(req.body);
     let users = indexUsers();
     users.push(newUser);
     write(users);
 
-    return res.redirect("user/login");
+    return res.redirect("/user/login");
   },
 
   login: (req, res) => {
@@ -46,8 +44,6 @@ module.exports = {
       style: "login",
     });
   },
-
-
 
   //Para mostrar el detalle de cada producto
   detail: (req, res) => {
@@ -65,9 +61,6 @@ module.exports = {
     });
   },
 
-  
-
-
   //Para editar y modificar usuarios de la DB
   edit: (req, res) => {
     let user = oneUser(parseInt(req.params.id));
@@ -80,36 +73,35 @@ module.exports = {
       title: "Edit User",
       style: "editUser",
 
-      user:user,
+      user: user,
     });
   },
 
-   modify: (req, res) => {
+  modify: (req, res) => {
     let user = oneUser(parseInt(req.params.id));
     let users = indexUsers();
     let userModified = users.map((p) => {
       if (p.id == product.id) {
-        p.userName= req.body.userName;
+        p.userName = req.body.userName;
         p.image =
           req.files && req.files.length > 0 ? req.files[0].filename : p.image;
         p.description = req.body.description;
-        p.email= req.body.email
-        p.password= req.body.password
-        p.level= req.body.level
-        p.credentials= req.body.credentials
-       //Revisar el p.credentials, p.level, p.email y p.password
+        p.email = req.body.email;
+        p.password = req.body.password;
+        p.level = req.body.level;
+        p.credentials = req.body.credentials;
+        //Revisar el p.credentials, p.level, p.email y p.password
       }
 
       return p;
     });
-    
+
     write(userModified);
 
     return res.redirect("/user" + user.id);
   },
-  
 
-    //Para eliminar un producto de la DB
+  //Para eliminar un producto de la DB
   destroy: (req, res) => {
     let users = indexUsers();
     let user = oneUser(parseInt(req.params.id));

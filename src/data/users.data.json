@@ -48,6 +48,14 @@
     "description": "magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
     "image": "http://dummyimage.com/168x100.png/5fa2dd/ffffff",
     "password": "EI0vZI6bgSV"
+  },
+  {
+    "id": 6,
+    "name": "aaaa",
+    "credentials": 0,
+    "level": 1,
+    "email": "aaaa@aaa.com",
+    "image": "campoAvatar-1660057136687-626896762.jpeg",
+    "password": "aaaa"
   }
-
 ]
