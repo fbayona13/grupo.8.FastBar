@@ -132,7 +132,52 @@ Wireframe --> No Va
 
 # SPRINT 5 (09/08 entrega)
 
-subir imagen del perfil --> opcional
+    subir imagen del perfil --> opcional
 
-funcion recordar el usuario --> opcional pero recomendable
-    cookie --> guarda el correo y con un middleware de logeo
+    funcion recordar el usuario --> opcional pero recomendable
+        cookie --> guarda el correo y con un middleware de logeo
+
+
+# SPRINT 6 (01/09 entrega)
+
+    Objetivo 1 -> hace regerencia a los migrations y seeders
+
+    Usar draw.io (o drawsql) para los diagramas relacionales (DER)
+
+    Exportar sql con estructura (personalizado, SOLO estructura / tildar agregar sentencia CREATE DATABASE/USE)
+
+    Exportar sql con data para poblar la BD 
+
+    modelos --> la parte de sequelize y la carpeta database
+
+    CRUD --> actualizar para usar con sequelize
+
+        (OPCIONAL) CRUDs de tablas secundarias / paginado con OFFSET (aplicable en index user y products)
+    
+
+
+
+# TAREAS (implementado desde sprint 4)
+
+- [ ] Revisar y optimizar el front-end para que sea mas funcional 
+- [ ] Corregir "categorias" -> a las categorias reales
+- [ ] Mover iconos del header.ejs a la misma distancia del burger menu
+- [ ] Botones de edit (que aparezcan y desaparezcan con Session)
+- [ ] Middleware, session, validations 
+- [ ] Diagramas relacionales y entidades
+- [ ] Structure.sql 
+- [ ] Data.sql
+- [ ] Modelos y carpeta database
+- [ ] Actualizar CRUD
+- [ ] Presentacion y preparar la oratoria para el final de clase
+
+
+# IDEAS PARA LAS ULTIMAS DOS CLASES PRACTICAS
+
+- Deploy de la pagina 
+    como hacer para que la pagina llegue a ser 100% funcional, el carrito de compras, etc.
+- Modo oscuro / claro
+- Como migrar la pagina a una app
+- Tracers y levantar informacion de la pagina
+- Posicionamiento en buscadores y optimizacion en SEO
+- Tailwind, bootstrap

@@ -12,8 +12,13 @@ WIREFRAME
 TRELLO
     https://trello.com/invite/b/iCxXDeyI/1c87c71f246b0a305d89d3a0ad50ca78/fastbar
 
-## PUBLICO OBJETIVO 
-Gente mayor de 18 anios que frecuente bares y boliches 
+SQL (DER)
+
+
+## NOTAS
+
+- Las retrospectivas estan por integrante dentro de las carpetas de los integrantes 
+- anotaciones.md --> tiene un seguimiento de los sprints y toma de nota de las modificaciones.
 
 ## INTEGRANTES DEL GRUPO 
 - [Bayona Facundo](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/facundoBayona)
@@ -21,8 +26,11 @@ Gente mayor de 18 anios que frecuente bares y boliches
 - [McCrea Steele Matthew](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/matthewMcCrea)
 - [Rey Luciano](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/lucianoRey)
 
+## PUBLICO OBJETIVO 
+Gente mayor de 18 anios que frecuente bares y boliches, que desean una forma mas facil y efectiva de adquirir un trago en un bar / boliche.
+
 ## TEMATICA
-Servicios gastronomicos
+Servicios gastronomicos / entretenimiento
 
 ## REFERENTES 
 
