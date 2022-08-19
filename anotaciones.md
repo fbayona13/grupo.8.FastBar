@@ -137,7 +137,7 @@ Wireframe --> No Va
     funcion recordar el usuario --> opcional pero recomendable
         cookie --> guarda el correo y con un middleware de logeo
 
-
+00.48.40
 # SPRINT 6 (01/09 entrega)
 
     Objetivo 1 -> hace regerencia a los migrations y seeders
@@ -155,8 +155,6 @@ Wireframe --> No Va
         (OPCIONAL) CRUDs de tablas secundarias / paginado con OFFSET (aplicable en index user y products)
     
 
-
-
 # TAREAS (implementado desde sprint 4)
 
 - [ ] Revisar y optimizar el front-end para que sea mas funcional 
@@ -164,20 +162,10 @@ Wireframe --> No Va
 - [ ] Mover iconos del header.ejs a la misma distancia del burger menu
 - [ ] Botones de edit (que aparezcan y desaparezcan con Session)
 - [ ] Middleware, session, validations 
+- [ ] Borrar la parte de validations (ver si es necesario)
 - [ ] Diagramas relacionales y entidades
 - [ ] Structure.sql 
 - [ ] Data.sql
 - [ ] Modelos y carpeta database
 - [ ] Actualizar CRUD
 - [ ] Presentacion y preparar la oratoria para el final de clase
-
-
-# IDEAS PARA LAS ULTIMAS DOS CLASES PRACTICAS
-
-- Deploy de la pagina 
-    como hacer para que la pagina llegue a ser 100% funcional, el carrito de compras, etc.
-- Modo oscuro / claro
-- Como migrar la pagina a una app
-- Tracers y levantar informacion de la pagina
-- Posicionamiento en buscadores y optimizacion en SEO
-- Tailwind, bootstrap
