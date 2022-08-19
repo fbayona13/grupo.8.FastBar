@@ -136,6 +136,8 @@ module.exports = {
   access: (req, res) => {
     let validations = validationResult(req);
     let { errors } = validations;
+    
+    // NOS SALTA UN MSG, QUE NO PODEMOS VER EN PANTALLA
     // if (errors && errors.length > 0) {
     //   return res.render("user/login", {
     //     title: "Login",
@@ -143,7 +145,7 @@ module.exports = {
     //     oldData: req.body,
     //     errors: validations.mapped(),
     //   });
-    //}
+    // }
 
     return res.redirect('/');
   },

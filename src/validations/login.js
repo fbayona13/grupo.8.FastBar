@@ -1,5 +1,5 @@
 const { body } = require("express-validator");
-const { index } = require("../models/users.model");
+const { indexUsers } = require("../models/users.model");
 const { compareSync } = require("bcryptjs");
 
 const login = [
@@ -12,12 +12,12 @@ const login = [
     .withMessage("El formato de E-mail no es válido")
     .bail()
     .custom((value) => {
-      let users = index();
+      let users = indexUsers();
       users = users.map((u) => u.email);
       if (!users.includes(value)) {
         throw new Error("El email no esta registrado");
       }
-      
+
       return true;
     }),
 
@@ -31,7 +31,7 @@ const login = [
     .bail()
     .custom((value, { req }) => {
       let { email } = req.body;
-      let users = index();
+      let users = indexUsers();
       let user = users.find((u) => u.email === email);
 
       if (!user) {

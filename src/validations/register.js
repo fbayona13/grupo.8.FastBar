@@ -1,7 +1,8 @@
 const { body } = require("express-validator");
-const { extName, resolve } = require("path");
+const { extname, resolve } = require("path");
 const { unlinkSync } = require("fs");
-const { index } = require("../models/users.model");
+const { indexUsers } = require("../models/users.model");
+
 const register = [
   //Validacion Nombre y Apellido
   body("campoNombreApellido")
@@ -30,7 +31,7 @@ const register = [
     .withMessage("El formato de E-mail no es válido")
     .bail()
     .custom((value) => {
-      let users = index();
+      let users = indexUsers();
       users = users.map((u) => u.email);
       if (users.includes(value)) {
         throw new Error("El email ya esta registrado");
@@ -65,7 +66,7 @@ const register = [
     }
     let extensions = [".svg", ".png", ".jpg", ".jpeg"];
     let image = files[0];
-    let extension = extName(image.filename);
+    let extension = extname(image.filename);
     if (!extensions.includes(extension)) {
       unlinkSync(
         resolve(dirname, "../../uploads/", "usersImages", image.filename)

@@ -1,6 +1,6 @@
 const { readFileSync, writeFileSync } = require("fs");
 const { resolve } = require("path");
-const {hashSync} = require("bcryptjs");
+const { hashSync } = require("bcryptjs");
 
 const userModel = {
   indexUsers: function () {
@@ -11,8 +11,7 @@ const userModel = {
   },
 
   oneUser: function (id) {
-
-    let file = resolve (__dirname, "../data", "users.data.json");
+    let file = resolve(__dirname, "../data", "users.data.json");
     let data = readFileSync(file);
     let users = JSON.parse(data);
 
