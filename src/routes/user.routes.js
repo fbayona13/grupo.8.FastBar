@@ -11,9 +11,11 @@ const {
   save,
   edit,
   modify,
-  process
+  process,
+  access
 } = require("../controllers/users");
-const middlewares = require('../middlewares/register')
+const middlewaresRegister = require('../middlewares/register');
+const middlewaresLogin = require('../middlewares/login');
 
 router.get("/", index);
 
@@ -23,10 +25,14 @@ router.get("/detail/:id", detail);
 //Para acceder a la info del formulario new.ejs y generar un producto nuevo en la DB
 router.get("/register", register);
 router.post("/save", [upload.any()], save);
-router.post("/register", middlewares, process)
+
+//Validacion de los elementos del register
+router.post("/register", middlewaresRegister, process)
 
 router.get("/login", login);
-//router.post('/login', access);
+
+//Validacion del login
+router.post('/login', middlewaresLogin, access);
 
 //Para acceder a la info del formulario edit.ejs y editar un producto de la DB
 router.get("/edit/:id", edit);

@@ -1,11 +1,6 @@
-const { 
-  indexUsers, 
-  oneUser,
-  create, 
-  write, 
-} = require("../models/users.model");
+const { indexUsers, oneUser, create, write } = require("../models/users.model");
 
-const validationResult = require ('express-validator')
+const { validationResult } = require("express-validator");
 
 module.exports = {
   //Va a mostrar una lista con todos los usuarios
@@ -29,30 +24,28 @@ module.exports = {
   },
 
   //
-  process: (req,res)=>{
-    let validations = validationResult(req)
-    let {errors} = validations
-    if (errors && errors.length > 0){
+  process: (req, res) => {
+    let validations = validationResult(req);
+    let { errors } = validations;
+    if (errors && errors.length > 0) {
       return res.render("user/register", {
-        
         title: "Register",
         style: "register",
         oldData: req.body,
-        errors: validations.mapped()
-      })
+        errors: validations.mapped(),
+      });
     }
-    
+
     req.body.image = req.files[0].filename;
     let newUser = create(req.body);
     let users = indexUsers();
     users.push(newUser);
     write(users);
 
-    return res.redirect('/user/login?msg"El registro fue exitoso"')
+    return res.redirect('/user/login?msg"El registro fue exitoso"');
   },
 
   save: (req, res) => {
-
     req.body.image = req.files[0].filename;
     let newUser = create(req.body);
     let users = indexUsers();
@@ -138,5 +131,20 @@ module.exports = {
     write(userDeleted);
 
     return res.redirect("/login/");
+  },
+
+  access: (req, res) => {
+    let validations = validationResult(req);
+    let { errors } = validations;
+    // if (errors && errors.length > 0) {
+    //   return res.render("user/login", {
+    //     title: "Login",
+    //     style: "login",
+    //     oldData: req.body,
+    //     errors: validations.mapped(),
+    //   });
+    //}
+
+    return res.redirect('/');
   },
 };

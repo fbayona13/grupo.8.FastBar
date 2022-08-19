@@ -1,5 +1,6 @@
 const { readFileSync, writeFileSync } = require("fs");
 const { resolve } = require("path");
+const {hashSync} = require("bcryptjs");
 
 const userModel = {
   indexUsers: function () {
@@ -23,17 +24,22 @@ const userModel = {
     let info = readFileSync(file);
     let users = JSON.parse(info);
     let lastUser = users[users.length - 1];
+    let credencial = 1;
 
     return Object({
       id: users.length == 0 ? 1 : lastUser.id + 1,
       name: data.campoNombreApellido,
-      credentials: 0,
+      //Admins --> 0, Sellers --> 1, Users --> 2
+      credentials: credencial,
       level: 1,
       email: data.campoEmail,
       description: data.userDescription,
-      image:data.image,
-      password:data.campoContrasena,
-      
+      image: data.image,
+      password: hashSync(data.campoContrasena, 10),
+
+      isAdmin: data.campoEmail.includes("@fastbar.com"), //credencial == 0,
+      isSeller: credencial == 1,
+      isUser: credencial == 2,
     });
   },
 

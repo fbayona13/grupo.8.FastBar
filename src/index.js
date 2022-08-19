@@ -12,7 +12,6 @@ app.use(public);
 app.use(uploads);
 
 
-
 //configuracion EJS
 app.set("views", resolve(__dirname, "views"));
 app.set("view engine", "ejs");

@@ -1,101 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('../includes/head.ejs') %> 
-<body>
-    <%- include ('../includes/header.ejs') %> 
+  <%- include ('../includes/head.ejs') %>
+  <body>
+    <%- include ('../includes/header.ejs') %>
     <main>
-        <div class="registerSection">
-            <section class="userSection">
-                <section class="userData">
-                    <figure class="avatarContenedor"><img class="avaratImg" src="/assets/Images/malik-skydsgaard-IgkwHPb-Vk8-unsplash.jpg" alt="user_photo.jpg"></figure>
-                    <h4 class="nombreCompleto">Nombre completo</h4>
-                    <p class="nombreUsuario">UserName#0000</p>
-                </section>
-                <section class="userData">
-                <!-- <form action="/user/register" method="post" class="formularioDescripcion" enctype="multipart/form-data">
+      <div class="registerSection">
+        <section class="userSection">
+          <section class="userData">
+            <figure class="avatarContenedor">
+              <img
+                class="avaratImg"
+                src="/assets/Images/malik-skydsgaard-IgkwHPb-Vk8-unsplash.jpg"
+                alt="user_photo.jpg"
+              />
+            </figure>
+            <h4 class="nombreCompleto">Nombre completo</h4>
+            <p class="nombreUsuario">UserName#0000</p>
+          </section>
+          <section class="userData">
+            <!-- <form action="/user/register" method="post" class="formularioDescripcion" enctype="multipart/form-data">
                         <label for="userDescription">Descripcion: </label>
                         <input type="textarea" name="userDescription" id="userDescription">
                 </form> -->
-                </section>
-                <section class="userData">
-                    <nav>
-                        <a href="/"><i class="fa-brands fa-facebook" id="iconosRedes"></i></a>
-                        <a href="/"><i class="fa-brands fa-instagram" id="iconosRedes"></i></a>
-                        <a href="/"><i class="fa-brands fa-twitter" id="iconosRedes"></i></a>
-                    </nav>
-                </section>
-            </section>
+          </section>
+          <section class="userData">
+            <nav>
+              <a href="/"
+                ><i class="fa-brands fa-facebook" id="iconosRedes"></i
+              ></a>
+              <a href="/"
+                ><i class="fa-brands fa-instagram" id="iconosRedes"></i
+              ></a>
+              <a href="/"
+                ><i class="fa-brands fa-twitter" id="iconosRedes"></i
+              ></a>
+            </nav>
+          </section>
+        </section>
 
-            <section class="userRegistrationForm">
-                 <form action="/user/save" method="post" class="formularioRegister" enctype="multipart/form-data">
-                   
-                    <fieldset class="fieldsetRegister">
-                        <label class="labelRegister" for="campoNombreApellido">Nombre y Apellido: </label>
-                        <input class="inputRegister" type="text" name="campoNombreApellido" id="campoNombreApellido" placeholder="Introduzca aqui su nombre y apellido" value="<%= locals.oldData ? oldData.campoNombreApellido : null %>" required>
-                          <% if (locals.errors && errors.campoNombreApellido > 0 ) { %>
-                           <p class="msg-error"><%= errors.campoNombreApellido.msg %> </p>
-                          <% } %>
-                    </fieldset>
+        <section class="userRegistrationForm">
+          <form
+            action="/user/save"
+            method="post"
+            class="formularioRegister"
+            enctype="multipart/form-data"
+          >
+            <fieldset class="fieldsetRegister">
+              <label class="labelRegister" for="campoNombreApellido"
+                >Nombre y Apellido:
+              </label>
+              <input
+                class="inputRegister"
+                type="text"
+                name="campoNombreApellido"
+                id="campoNombreApellido"
+                placeholder="Introduzca aqui su nombre y apellido"
+                value="<%= locals.oldData ? oldData.campoNombreApellido : null %>"
+                required
+              />
+              <% if (locals.errors && errors.campoNombreApellido > 0 ) { %>
+              <p class="msg-error"><%= errors.campoNombreApellido.msg %></p>
+              <% } %>
+            </fieldset>
 
-                    <fieldset class="fieldsetRegister">
-                        <label class="labelRegister" for="campoNombreUsuario">Nombre de usuario (ID): </label>
-                        <input class="inputRegister" type="text" name="campoNombreUsuario" id="campoNombreUsuario" placeholder="Debe ser unico" value="<%= locals.oldData ? oldData.campoNombreUsuario : null %>" required>
-                        <% if (locals.errors && errors.campoNombreUsuario > 0 ) { %>
-                            <p class="msg-error"><%= errors.campoNombreUsuario.msg %> </p>
-                           <% } %>
-                    </fieldset>
+            <fieldset class="fieldsetRegister">
+              <label class="labelRegister" for="campoNombreUsuario"
+                >Nombre de usuario (ID):
+              </label>
+              <input
+                class="inputRegister"
+                type="text"
+                name="campoNombreUsuario"
+                id="campoNombreUsuario"
+                placeholder="Debe ser unico"
+                value="<%= locals.oldData ? oldData.campoNombreUsuario : null %>"
+                required
+              />
+              <% if (locals.errors && errors.campoNombreUsuario > 0 ) { %>
+              <p class="msg-error"><%= errors.campoNombreUsuario.msg %></p>
+              <% } %>
+            </fieldset>
 
-                    <fieldset class="fieldsetRegister">
-                        <label class="labelRegister" for="">Email: </label>
-                        <input class="inputRegister" type="email" name="campoEmail" id="campoEmail" placeholder="Introduzca aqui su email" value="<%= locals.oldData ? oldData.campoEmail : null %>" required>
-                        <% if (locals.errors && errors.campoEmail > 0 ) { %>
-                            <p class="msg-error"><%= errors.campoEmail.msg %> </p>
-                           <% } %>
-                    </fieldset>
+            <fieldset class="fieldsetRegister">
+              <label class="labelRegister" for="">Email: </label>
+              <input
+                class="inputRegister"
+                type="email"
+                name="campoEmail"
+                id="campoEmail"
+                placeholder="Introduzca aqui su email"
+                value="<%= locals.oldData ? oldData.campoEmail : null %>"
+                required
+              />
+              <% if (locals.errors && errors.campoEmail > 0 ) { %>
+              <p class="msg-error"><%= errors.campoEmail.msg %></p>
+              <% } %>
+            </fieldset>
 
-                    <fieldset class="fieldsetRegister">
-                        <label class="labelRegister" for="campoCumpleanos">Fecha de nacimiento: </label>
-                        <input class="inputRegister" type="date" name="campoCumpleanos" id="campoCumpleanos" min="2000-01-02" required>
-                    
-                    </fieldset>
+            <fieldset class="fieldsetRegister">
+              <label class="labelRegister" for="campoCumpleanos"
+                >Fecha de nacimiento:
+              </label>
+              <input
+                class="inputRegister"
+                type="date"
+                name="campoCumpleanos"
+                id="campoCumpleanos"
+                min="2000-01-02"
+                required
+              />
+            </fieldset>
 
-                    <fieldset class="fieldsetRegister">
-                        <label class="labelRegister" for="campoContrasena">Contraseña: </label>
-                        <input class="inputRegister" type="password" name="campoContrasena" id="campoContrasena" value="<%= locals.oldData ? oldData.campoContrasena : null %>" required>
-                        <% if (locals.errors && errors.campoContrasena > 0 ) { %>
-                            <p class="msg-error"><%= errors.campoContrasena.msg %> </p>
-                           <% } %>
-                    </fieldset>
+            <fieldset class="fieldsetRegister">
+              <label class="labelRegister" for="campoContrasena"
+                >Contraseña:
+              </label>
+              <input
+                class="inputRegister"
+                type="password"
+                name="campoContrasena"
+                id="campoContrasena"
+                value="<%= locals.oldData ? oldData.campoContrasena : null %>"
+                required
+              />
+              <% if (locals.errors && errors.campoContrasena > 0 ) { %>
+              <p class="msg-error"><%= errors.campoContrasena.msg %></p>
+              <% } %>
+            </fieldset>
 
-                    <fieldset class="fieldsetRegister">
-                        <label class="labelRegister" for="campoContrasenaRepe">Confirmar contraseña: </label>
-                        <input class="inputRegister" type="password" name="campoContrasenaRepe" id="campoContrasenaRepe" value="<%= locals.oldData ? oldData.campoContrasenaRepe : null %>" required>
-                        <% if (locals.errors && errors.campoContrasenaRepe > 0 ) { %>
-                            <p class="msg-error"><%= errors.campoContrasenaRepe.msg %> </p>
-                           <% } %>
-                    </fieldset>
+            <fieldset class="fieldsetRegister">
+              <label class="labelRegister" for="campoContrasenaRepe"
+                >Confirmar contraseña:
+              </label>
+              <input
+                class="inputRegister"
+                type="password"
+                name="campoContrasenaRepe"
+                id="campoContrasenaRepe"
+                value="<%= locals.oldData ? oldData.campoContrasenaRepe : null %>"
+                required
+              />
+              <% if (locals.errors && errors.campoContrasenaRepe > 0 ) { %>
+              <p class="msg-error"><%= errors.campoContrasenaRepe.msg %></p>
+              <% } %>
+            </fieldset>
 
-                    <fieldset class="fieldsetRegister">
-                        <label class="labelRegister" for="campoAvatar"><i class="fa-solid fa-image"></i> Foto de perfil: </label>
-                        <input class="inputRegister" type="file" name="campoAvatar" name="campoAvatar" accept="image/*" value="<%= locals.oldData ? oldData.campoAvatar : null %>" required>
-                        <% if (locals.errors && errors.campoAvatar > 0 ) { %>
-                            <p class="msg-error"><%= errors.campoAvatar.msg %> </p>
-                           <% } %>
-                    </fieldset>
+            <fieldset class="fieldsetRegister">
+              <label class="labelRegister" for="campoAvatar"
+                ><i class="fa-solid fa-image"></i> Foto de perfil:
+              </label>
+              <input
+                class="inputRegister"
+                type="file"
+                name="campoAvatar"
+                name="campoAvatar"
+                accept="image/*"
+                value="<%= locals.oldData ? oldData.campoAvatar : null %>"
+                required
+              />
+              <% if (locals.errors && errors.campoAvatar > 0 ) { %>
+              <p class="msg-error"><%= errors.campoAvatar.msg %></p>
+              <% } %>
+            </fieldset>
 
-                    <fieldset class="fieldsetTermsConditions">
-                        <input type="checkbox" name="campoTerm" id="campoTerm" required>
-                        <label class="labelTemsConditions" for="campoTerm">Acepto los terminos y condiciones de uso y privacidad</label>
-                    </fieldset>
+            <fieldset class="fieldsetTermsConditions">
+              <input type="checkbox" name="campoTerm" id="campoTerm" required />
+              <label class="labelTemsConditions" for="campoTerm"
+                >Acepto los terminos y condiciones de uso y privacidad</label
+              >
+            </fieldset>
 
-                    <fieldset class="fieldsetTermsConditions">
-                        <button class="registerButton" type="submit">REGISTRARSE</button>
-                    </fieldset>
-
-                </form>
-            </section>
-        </div>
+            <fieldset class="fieldsetTermsConditions">
+              <button class="registerButton" type="submit">REGISTRARSE</button>
+            </fieldset>
+          </form>
+        </section>
+      </div>
     </main>
-    <%- include ('../includes/footer.ejs') %> 
-</body>
+    <%- include ('../includes/footer.ejs') %>
+  </body>
 </html>

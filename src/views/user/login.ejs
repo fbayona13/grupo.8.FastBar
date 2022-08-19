@@ -24,6 +24,12 @@
               id="email"
               placeholder="Introduzca aqui su email"
               required
+              value="<%= locals.oldData ? oldData.campoEmail : null %>"
+              required
+            
+              <% if (locals.errors && errors.campoEmail > 0 ) { %>
+              <p class="msg-error"><%= errors.campoEmail.msg %></p>
+              <% } %>
             />
           </fielset>
           <fielset class="fieldsetLogin">
@@ -33,7 +39,12 @@
               type="password"
               name="contrasena"
               id="constrasena"
+              value="<%= locals.oldData ? oldData.campoContrasena : null %>"
               required
+              
+              <% if (locals.errors && errors.campoContrasena > 0 ) { %>
+              <p class="msg-error"><%= errors.campoContrasena.msg %></p>
+              <% } %>
             />
           </fielset>
           <fielset class="fieldsetButton">
