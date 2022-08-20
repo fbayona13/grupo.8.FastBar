@@ -36,9 +36,9 @@ const userModel = {
       image: data.image,
       password: hashSync(data.campoContrasena, 10),
 
-      isAdmin: data.campoEmail.includes("@fastbar.com"), //credencial == 0,
-      isSeller: credencial == 1,
-      isUser: credencial == 2,
+      isAdmin: data.campoEmail.includes("@fastbar.com"), // || credencial == 0,
+      // isSeller: this.credentials == 1,
+      // isUser: this.credentials == 2,
     });
   },
 

@@ -147,6 +147,11 @@ module.exports = {
     //   });
     // }
 
+    let users = indexUsers();
+    let user = users.find(user => user.email === req.body.email);
+    //Aca se estaria loggeando el user
+    req.session.user = user;
+    
     return res.redirect('/');
   },
 };
