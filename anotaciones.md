@@ -159,11 +159,11 @@ Wireframe --> No Va
 
 - [ ] Revisar y optimizar el front-end para que sea mas funcional 
 - [ ] Corregir "categorias" -> a las categorias reales
-- [ ] Mover iconos del header.ejs a la misma distancia del burger menu
-- [ ] Botones de edit (que aparezcan y desaparezcan con Session)
-- [ ] Middleware, session, validations 
-- [ ] Borrar la parte de validations (ver si es necesario)
-- [ ] Diagramas relacionales y entidades
+- [x] Mover iconos del header.ejs a la misma distancia del burger menu
+- [x] Botones de edit (que aparezcan y desaparezcan con Session)
+- [x] Middleware, session, validations 
+- [-] Borrar la parte de validations (ver si es necesario)
+- [x] Diagramas relacionales y entidades
 - [ ] Structure.sql 
 - [ ] Data.sql
 - [ ] Modelos y carpeta database
