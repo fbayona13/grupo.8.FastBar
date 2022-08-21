@@ -63,7 +63,7 @@ module.exports = {
     });
   },
 
-  //Para mostrar el detalle de cada producto
+  //Para mostrar el detalle de cada usuario
   detail: (req, res) => {
     let user = oneUser(parseInt(req.params.id));
     if (!user) {
@@ -119,7 +119,7 @@ module.exports = {
     return res.redirect("/user" + user.id);
   },
 
-  //Para eliminar un producto de la DB
+  //Para eliminar un usuario de la DB
   destroy: (req, res) => {
     let users = indexUsers();
     let user = oneUser(parseInt(req.params.id));
@@ -133,10 +133,11 @@ module.exports = {
     return res.redirect("/login/");
   },
 
+  //Para validar (Validation) y acceder(Session) a la cuenta del usuario
   access: (req, res) => {
     let validations = validationResult(req);
     let { errors } = validations;
-    
+
     // NOS SALTA UN MSG, QUE NO PODEMOS VER EN PANTALLA
     // if (errors && errors.length > 0) {
     //   return res.render("user/login", {
@@ -148,10 +149,17 @@ module.exports = {
     // }
 
     let users = indexUsers();
-    let user = users.find(user => user.email === req.body.email);
+    let user = users.find((user) => user.email === req.body.email);
     //Aca se estaria loggeando el user
     req.session.user = user;
-    
-    return res.redirect('/');
+
+    return res.redirect("/");
+  },
+
+  //Para salir de la Session del usuario
+  logout: (req, res) => {
+    delete req.session.user;
+
+    return res.redirect("/");
   },
 };

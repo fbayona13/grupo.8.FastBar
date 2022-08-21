@@ -12,6 +12,7 @@ const {
   edit,
   modify,
   save,
+  destroy,
 } = require("../controllers/products");
 
 //Para mostrar el index de todos los productos
@@ -26,6 +27,8 @@ router.get("/detail/:id", detail);
 //Para acceder a la info del formulario new.ejs y generar un producto nuevo en la DB
 router.get("/new", newie);
 router.post("/save", [upload.any()], save);
+//Para borrar un producto de la DB
+router.post("/delete", destroy);
 
 //Para acceder a la info del formulario edit.ejs y editar un producto de la DB
 router.get("/edit/:id", edit);

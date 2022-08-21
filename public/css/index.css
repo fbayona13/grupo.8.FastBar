@@ -1,0 +1,21 @@
+h2 {
+    margin-top: 12vh;
+}
+
+.productTile{
+    width: 98vw;
+    height: auto;
+    border: 1px solid black;
+
+    margin: 2vh 0;
+
+    display: flex;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+.productTile picture a img {
+    max-width: 100%;
+    max-height: auto;
+}
+

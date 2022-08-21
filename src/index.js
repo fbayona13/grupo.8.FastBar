@@ -29,7 +29,7 @@ app.use(
     resave: true,
   })
 );
-app.use(require("./middlewares/credentials"));
+app.use(require("./middlewares/user"));
 
 //ruta para Home, Cart
 app.use("/", require("./routes/main.routes"));

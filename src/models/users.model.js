@@ -23,7 +23,7 @@ const userModel = {
     let info = readFileSync(file);
     let users = JSON.parse(info);
     let lastUser = users[users.length - 1];
-    let credencial = 1;
+    let credencial = 2;
 
     return Object({
       id: users.length == 0 ? 1 : lastUser.id + 1,
@@ -37,8 +37,8 @@ const userModel = {
       password: hashSync(data.campoContrasena, 10),
 
       isAdmin: data.campoEmail.includes("@fastbar.com"), // || credencial == 0,
-      // isSeller: this.credentials == 1,
-      // isUser: this.credentials == 2,
+      isSeller: credencial == 1,
+      isUser: credencial == 2,
     });
   },
 

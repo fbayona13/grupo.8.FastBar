@@ -6,7 +6,7 @@
     
     <h2>Aca va una lista de todos los productos</h2>
     <% users.forEach(user => { %>
-    <li>
+    <article>
       <picture>
         <a href="">
           <img src="<%= user.image%>" alt="" />
@@ -18,8 +18,11 @@
         <p>Email: <%= user.email%></p>
         <p>Credenciales: <%= user.credentials%></p>
         <p>Nivel: <%= user.level%></p>
+        <% if (user && user.isAdmin) { %>
+        <a href="/user/delete"><i class="fa-solid fa-trash-can"></i></a>
+        <% } %>
       </section>
-    </li>
+    </article>
     <% }) %>
 
     <%- include ('../includes/footer.ejs') %> 

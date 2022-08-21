@@ -5,11 +5,13 @@
   <div id="lateralMenu">
     <nav>
       <% if (!user) { %>
-        <a href="/user/login"><i class="fa-solid fa-user icono"></i></a>
-        <a href="/user/register"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+      <a href="/user/login"><i class="fa-solid fa-user icono"></i></a>
+      <a href="/user/register"
+        ><i class="fa-solid fa-arrow-right-to-bracket"></i
+      ></a>
 
       <% } else { %>
-        <a href="/cart"><i class="fa-solid fa-cart-shopping icono"></i></a>
+      <a href="/cart"><i class="fa-solid fa-cart-shopping icono"></i></a>
 
       <% } %>
     </nav>
@@ -21,9 +23,17 @@
       <a href="/">categoria 5</a>
     </nav>
     <nav>
-      <% if (user) { %>
-        <a href="/products/new">Crear Trago</a>
-        <a href="/user/logout">Logout</a>
+      <% if (user && user.isAdmin) { %>
+      <a href="/products/new">Crear Trago</a>
+      <a href="/products/">Admin tragos</a>
+      <a href="/user/">Admin usuarios</a>
+      <a href="/user/logout">Logout</a>
+      <% } else if (user && user.isSeller) { %>
+      <a href="/user/logout">Logout</a>
+      <a href="/products/new">Crear Trago</a>
+      <a href="/products/">Admin tragos</a>
+      <% } else if (user && user.isUser) { %>
+      <a href="/user/logout">Logout</a>
       <% } %>
     </nav>
     <nav>

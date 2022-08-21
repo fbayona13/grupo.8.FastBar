@@ -137,7 +137,7 @@ Wireframe --> No Va
     funcion recordar el usuario --> opcional pero recomendable
         cookie --> guarda el correo y con un middleware de logeo
 
-01.25.30
+01.44.09
 # SPRINT 6 (01/09 entrega)
 
     Objetivo 1 -> hace regerencia a los migrations y seeders

@@ -17,7 +17,10 @@
     "email": "al1@squidoo.com",
     "description": "congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis",
     "image": "http://dummyimage.com/157x100.png/5fa2dd/ffffff",
-    "password": "BSmBz4X"
+    "password": "BSmBz4X",
+    "isAdmin": false,
+    "isSeller": true,
+    "isUser": false
   },
   {
     "id": 3,
@@ -58,7 +61,7 @@
     "image": "campoAvatar-1660948434345-117314126.jpeg",
     "password": "$2a$10$VlBBFI2paa9OeUXbrAU3PeFv0CmUkj8vVLw.816.k42wu8SYEV5qu",
     "isAdmin": true,
-    "isSeller": true,
+    "isSeller": false,
     "isUser": false
   }
 ]
