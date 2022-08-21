@@ -125,6 +125,8 @@ nav#logoSection a img {
 }
 
 #loginCartNav {
+  margin-right: 2rem;
+
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
