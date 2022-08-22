@@ -19,3 +19,15 @@ h2 {
     max-height: auto;
 }
 
+.productTile section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-adminseller {
+    padding: 0.5vw 3vh;
+    border-radius: 0.75vw;
+    border: none;
+    color: snow;
+    background-color: black;
+}
