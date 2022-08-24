@@ -13,6 +13,7 @@ TRELLO
     https://trello.com/invite/b/iCxXDeyI/1c87c71f246b0a305d89d3a0ad50ca78/fastbar
 
 SQL (DER)
+    https://drawsql.app/teams/grupo-8/diagrams/der
 
 
 ## NOTAS
