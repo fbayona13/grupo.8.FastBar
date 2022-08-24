@@ -137,7 +137,6 @@ Wireframe --> No Va
     funcion recordar el usuario --> opcional pero recomendable
         cookie --> guarda el correo y con un middleware de logeo
 
-01.44.09
 # SPRINT 6 (01/09 entrega)
 
     Objetivo 1 -> hace regerencia a los migrations y seeders
@@ -154,7 +153,7 @@ Wireframe --> No Va
 
         (OPCIONAL) CRUDs de tablas secundarias / paginado con OFFSET (aplicable en index user y products)
     
-
+00.15.15
 # TAREAS (implementado desde sprint 4)
 
 - [ ] Revisar y optimizar el front-end para que sea mas funcional 
