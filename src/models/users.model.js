@@ -25,6 +25,10 @@ const userModel = {
     let lastUser = users[users.length - 1];
     let credencial = 2;
 
+    if (data.campoEmail.includes("@fastbar.com")) {
+      return credencial == 0;
+    }
+
     return Object({
       id: users.length == 0 ? 1 : lastUser.id + 1,
       name: data.campoNombreApellido,
@@ -35,10 +39,6 @@ const userModel = {
       description: data.userDescription,
       image: data.image,
       password: hashSync(data.campoContrasena, 10),
-
-      isAdmin: data.campoEmail.includes("@fastbar.com"), // || credencial == 0,
-      isSeller: credencial == 1,
-      isUser: credencial == 2,
     });
   },
 

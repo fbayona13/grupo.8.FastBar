@@ -137,6 +137,13 @@ Wireframe --> No Va
     funcion recordar el usuario --> opcional pero recomendable
         cookie --> guarda el correo y con un middleware de logeo
 
+# SPRINT 5 (modificaciones)
+
+    funcion recordar el usuario --> cookies
+    isAdmin isSeller isUser --> isAuth
+    isLogged
+
+[comment]: modificaciones pendientes
 # SPRINT 6 (01/09 entrega)
 
     Objetivo 1 -> hace regerencia a los migrations y seeders
@@ -153,18 +160,17 @@ Wireframe --> No Va
 
         (OPCIONAL) CRUDs de tablas secundarias / paginado con OFFSET (aplicable en index user y products)
     
-00.15.15
+01.40.41
 # TAREAS (implementado desde sprint 4)
 
 - [ ] Revisar y optimizar el front-end para que sea mas funcional 
 - [ ] Corregir "categorias" -> a las categorias reales
 - [x] Mover iconos del header.ejs a la misma distancia del burger menu
 - [x] Botones de edit (que aparezcan y desaparezcan con Session)
-- [x] Middleware, session, validations 
-- [-] Borrar la parte de validations (ver si es necesario)
+- [x] Middleware, session, validations
 - [x] Diagramas relacionales y entidades
 - [ ] Structure.sql 
 - [ ] Data.sql
-- [ ] Modelos y carpeta database
+- [x] Modelos y carpeta database
 - [ ] Actualizar CRUD
 - [ ] Presentacion y preparar la oratoria para el final de clase

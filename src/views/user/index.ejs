@@ -18,7 +18,7 @@
         <p>Email: <%= user.email%></p>
         <p>Credenciales: <%= user.credentials%></p>
         <p>Nivel: <%= user.level%></p>
-        <% if (user && user.isAdmin) { %>
+        <% if (user && user.isAuth([0])) { %>
         <a href="/user/delete"><i class="fa-solid fa-trash-can"></i></a>
         <% } %>
       </section>

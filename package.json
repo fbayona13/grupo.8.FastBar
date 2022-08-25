@@ -6,7 +6,11 @@
   "scripts": {
     "test": "clear && nodemon src/index.js -e json,js,mjs,ejs",
     "start": "node src/index.js",
-    "sq-i": "sequelize init"
+    "sq-i": "sequelize init",
+    "sq-ms": "sequelize init:migrations && sequelize init:seeders",
+    "sq-mg": "sequelize migration:generate --name users",
+    "sq-sg": "sequelize seed:generate --name products",
+    "sq-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",

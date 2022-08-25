@@ -2,13 +2,10 @@
   {
     "id": 1,
     "name": "admin",
-    "credentials": 1,
+    "credentials": 0,
     "level": 1,
     "email": "admin@fastbar.com",
     "image": "campoAvatar-1660948434345-117314126.jpeg",
-    "password": "$2a$10$VlBBFI2paa9OeUXbrAU3PeFv0CmUkj8vVLw.816.k42wu8SYEV5qu",
-    "isAdmin": true,
-    "isSeller": false,
-    "isUser": false
+    "password": "$2a$10$VlBBFI2paa9OeUXbrAU3PeFv0CmUkj8vVLw.816.k42wu8SYEV5qu"
   }
 ]
