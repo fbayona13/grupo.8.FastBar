@@ -1,21 +1,23 @@
-const { indexUsers, oneUser, create, write } = require("../models/users.model");
+//const { indexUsers, oneUser, create, write } = require("../models/users.model");
+const { User } = require("../database/models/index");
 
 const { validationResult } = require("express-validator");
+const { hashSync } = require("bcryptjs");
 
 module.exports = {
   //Va a mostrar una lista con todos los usuarios
-  index: (req, res) => {
+  index: async (req, res) => {
     return res.render("user/index", {
       // head.ejs
       title: "Index",
       style: "index",
 
-      users: indexUsers(),
+      users: await User.findAll(),
     });
   },
 
   //Para crear y guardar nuevo usuario en la DB
-  register: (req, res) => {
+  register: async (req, res) => {
     return res.render("user/register", {
       // head.ejs
       title: "Register",
@@ -24,7 +26,7 @@ module.exports = {
   },
 
   //
-  process: (req, res) => {
+  process: async (req, res) => {
     let validations = validationResult(req);
     let { errors } = validations;
     if (errors && errors.length > 0) {
@@ -36,26 +38,30 @@ module.exports = {
       });
     }
 
-    req.body.image = req.files[0].filename;
-    let newUser = create(req.body);
-    let users = indexUsers();
-    users.push(newUser);
-    write(users);
+    // HASH DE LA CONTRASEÑA
+    req.body.password = hashSync(req.body.password, 10);
+
+    //VERIFICACION DE SI ES ADMIN
+    req.body.credentials = String(req.body.email)
+      .toLowerCase()
+      .includes("@fastbar.com")
+      ? 0
+      : 2;
+
+    //CREA EL USUARIO EN LA BD
+    await User.create(req.body);
+
+    // VERSION MODELO DE PRUEBA
+    // req.body.image = req.files[0].filename;
+    // let newUser = create(req.body);
+    // let users = indexUsers();
+    // users.push(newUser);
+    // write(users);
 
     return res.redirect('/user/login?msg"El registro fue exitoso"');
   },
 
-  save: (req, res) => {
-    req.body.image = req.files[0].filename;
-    let newUser = create(req.body);
-    let users = indexUsers();
-    users.push(newUser);
-    write(users);
-
-    return res.redirect("/user/login");
-  },
-
-  login: (req, res) => {
+  login: async (req, res) => {
     return res.render("user/login", {
       // head.ejs
       title: "Login",
@@ -64,8 +70,8 @@ module.exports = {
   },
 
   //Para mostrar el detalle de cada usuario
-  detail: (req, res) => {
-    let user = oneUser(parseInt(req.params.id));
+  detail: async (req, res) => {
+    let user = User.findByPk(parseInt(req.params.id));
     if (!user) {
       return res.redirect("/user/");
     }
@@ -80,8 +86,8 @@ module.exports = {
   },
 
   //Para editar y modificar usuarios de la DB
-  edit: (req, res) => {
-    let user = oneUser(parseInt(req.params.id));
+  edit: async (req, res) => {
+    let user = User.findByPk(parseInt(req.params.id));
     if (!user) {
       return res.redirect("/users/");
     }
@@ -95,9 +101,9 @@ module.exports = {
     });
   },
 
-  modify: (req, res) => {
-    let user = oneUser(parseInt(req.params.id));
-    let users = indexUsers();
+  modify: async (req, res) => {
+    let user = User.findByPk(parseInt(req.params.id));
+    let users = await User.findAll();
     let userModified = users.map((p) => {
       if (p.id == product.id) {
         p.userName = req.body.userName;
@@ -120,9 +126,9 @@ module.exports = {
   },
 
   //Para eliminar un usuario de la DB
-  destroy: (req, res) => {
-    let users = indexUsers();
-    let user = oneUser(parseInt(req.params.id));
+  destroy: async (req, res) => {
+    let users = await User.findAll();
+    let user = User.findByPk(parseInt(req.params.id));
     if (!user) {
       return res.redirect("/users/");
     }
@@ -134,7 +140,7 @@ module.exports = {
   },
 
   //Para validar (Validation) y acceder(Session) a la cuenta del usuario
-  access: (req, res) => {
+  access: async (req, res) => {
     let validations = validationResult(req);
     let { errors } = validations;
 
@@ -148,8 +154,9 @@ module.exports = {
     //   });
     // }
 
-    let users = indexUsers();
-    let user = users.find((user) => user.email === req.body.email);
+    //let users = indexUsers();
+    //let users = await User.findAll();
+    let user = await User.findOne({ where: { email: req.body.email } });
     //Aca se estaria loggeando el user
     req.session.user = user;
 
@@ -157,7 +164,7 @@ module.exports = {
   },
 
   //Para salir de la Session del usuario
-  logout: (req, res) => {
+  logout: async (req, res) => {
     delete req.session.user;
 
     return res.redirect("/");

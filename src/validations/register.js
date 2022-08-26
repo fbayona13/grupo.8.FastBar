@@ -1,7 +1,7 @@
 const { body } = require("express-validator");
 const { extname, resolve } = require("path");
 const { unlinkSync } = require("fs");
-const { indexUsers } = require("../models/users.model");
+const { User } = require("../database/models/index");
 
 const register = [
   //Validacion Nombre y Apellido
@@ -30,8 +30,8 @@ const register = [
     .isEmail()
     .withMessage("El formato de E-mail no es válido")
     .bail()
-    .custom((value) => {
-      let users = indexUsers();
+    .custom(async (value) => {
+      let users = await User.findAll();
       users = users.map((u) => u.email);
       if (users.includes(value)) {
         throw new Error("El email ya esta registrado");

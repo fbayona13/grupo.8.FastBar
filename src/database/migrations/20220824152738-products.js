@@ -4,84 +4,90 @@ module.exports = {
   //Cuando se construye la migracion (la tabla)
   async up(queryInterface, Sequelize) {
     try {
-      await queryInterface.createTable("products", {
-        id: {
-          type: Sequelize.INTEGER,
-          primaryKey: true,
-          allowNull: false,
-          autoIncrement: true,
-        },
+      await queryInterface.createTable(
+        "products",
+        {
+          id: {
+            type: Sequelize.INTEGER,
+            primaryKey: true,
+            allowNull: false,
+            autoIncrement: true,
+          },
 
-        image: {
-          type: Sequelize.INTEGER,
-          // references: {
-          //   model: "images",
-          //   key: "id",
-          // },
-          //Hay que cambiarlo a false cuando la foreign key ya funcione
-          allowNull: true,
-        },
+          image: {
+            type: Sequelize.INTEGER,
+            // references: {
+            //   model: "images",
+            //   key: "id",
+            // },
+            //Hay que cambiarlo a false cuando la foreign key ya funcione
+            allowNull: true,
+          },
 
-        category: {
-          type: Sequelize.INTEGER,
-          // references: {
-          //   model: "categories",
-          //   key: "id",
-          // },
-          //Hay que cambiarlo a false cuando la foreign key ya funcione
-          allowNull: true,
-        },
+          category: {
+            type: Sequelize.INTEGER,
+            // references: {
+            //   model: "categories",
+            //   key: "id",
+            // },
+            //Hay que cambiarlo a false cuando la foreign key ya funcione
+            allowNull: true,
+          },
 
-        state: {
-          type: Sequelize.BOOLEAN,
-          allowNull: false,
-        },
+          state: {
+            type: Sequelize.BOOLEAN,
+            allowNull: false,
+          },
 
-        topSelection: {
-          type: Sequelize.BOOLEAN,
-          allowNull: false,
-        },
+          topSelection: {
+            type: Sequelize.BOOLEAN,
+            allowNull: false,
+          },
 
-        favorites: {
-          type: Sequelize.BOOLEAN,
-          allowNull: false,
-        },
+          favorites: {
+            type: Sequelize.BOOLEAN,
+            allowNull: false,
+          },
 
-        discount: {
-          type: Sequelize.TINYINT,
-          allowNull: false,
-        },
+          discount: {
+            type: Sequelize.TINYINT,
+            allowNull: false,
+          },
 
-        drinkName: {
-          type: Sequelize.STRING,
-          allowNull: false,
-        },
+          drinkName: {
+            type: Sequelize.STRING,
+            allowNull: false,
+          },
 
-        price: {
-          type: Sequelize.SMALLINT,
-          allowNull: false,
-        },
+          price: {
+            type: Sequelize.SMALLINT,
+            allowNull: false,
+          },
 
-        description: {
-          type: Sequelize.TEXT,
-          allowNull: true,
-        },
+          description: {
+            type: Sequelize.TEXT,
+            allowNull: true,
+          },
 
-        flavorProfile: {
-          type: Sequelize.TEXT,
-          allowNull: true,
-        },
+          flavorProfile: {
+            type: Sequelize.TEXT,
+            allowNull: true,
+          },
 
-        creator: {
-          type: Sequelize.STRING,
-          allowNull: true,
-        },
+          creator: {
+            type: Sequelize.STRING,
+            allowNull: true,
+          },
 
-        history: {
-          type: Sequelize.TEXT,
-          allowNull: true,
+          history: {
+            type: Sequelize.TEXT,
+            allowNull: true,
+          },
         },
-      });
+        {
+          timestamps: false,
+        }
+      );
     } catch (error) {
       console.log(error);
     }
