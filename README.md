@@ -4,22 +4,6 @@
 
 Un sitio web con el menu de tragos de un boliche / bar, que nos permita ver la carta, pagar en el momento y nos avise cuando esta nuestro trago para retirar en la barra.
 
-## LINKS
-
-WIREFRAME
-https://www.figma.com/file/bAOfw0gwl9gYsO6JMnO8Ut/Alpha-wireframe?node-id=0%3A1
-
-TRELLO
-https://trello.com/invite/b/iCxXDeyI/1c87c71f246b0a305d89d3a0ad50ca78/fastbar
-
-SQL (DER)
-https://drawsql.app/teams/grupo-8/diagrams/der
-
-## NOTAS
-
-- Las retrospectivas estan por integrante dentro de las carpetas de los integrantes
-- anotaciones.md --> tiene un seguimiento de los sprints y toma de nota de las modificaciones.
-
 ## INTEGRANTES DEL GRUPO
 
 - [Bayona Facundo](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/facundoBayona)
@@ -59,6 +43,23 @@ Servicios gastronomicos / entretenimiento
   - El mapa que nos muestra las canchas que tenemos cerca --> Podemos aplicarlo para poner ubicaciones cercanas de bares, boliches
   - Formulario de reserva de cancha --> Podemos aplicarlo para reservar entradas, membresias, mesas, lugares, servicios
   - El KPI --> Podemos aplicarlo para conocer flujo de gente, demografia, ingresos, y fidelizacion de clientes
+
+## LINKS
+
+WIREFRAME
+https://www.figma.com/file/bAOfw0gwl9gYsO6JMnO8Ut/Alpha-wireframe?node-id=0%3A1
+
+TRELLO
+https://trello.com/invite/b/iCxXDeyI/1c87c71f246b0a305d89d3a0ad50ca78/fastbar
+
+## SQL 
+https://drawsql.app/teams/grupo-8/diagrams/der
+![DER](DER_FastBar.png)
+
+## NOTAS
+
+- Las retrospectivas estan por integrante dentro de las carpetas de los integrantes
+- anotaciones.md --> tiene un seguimiento de los sprints y toma de nota de las modificaciones.
 
 ## REFERENCIAS DEL CODIGO
 
