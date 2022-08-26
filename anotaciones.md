@@ -160,7 +160,7 @@ Wireframe --> No Va
 
         (OPCIONAL) CRUDs de tablas secundarias / paginado con OFFSET (aplicable en index user y products)
     
-01.40.41
+00.00.00
 # TAREAS (implementado desde sprint 4)
 
 - [ ] Revisar y optimizar el front-end para que sea mas funcional 

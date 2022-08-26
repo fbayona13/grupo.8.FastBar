@@ -14,20 +14,20 @@ module.exports = {
 
         image: {
           type: Sequelize.INTEGER,
-          references: {
-            model: "images",
-            key: "id",
-          },
+          // references: {
+          //   model: "images",
+          //   key: "id",
+          // },
           //Hay que cambiarlo a false cuando la foreign key ya funcione
           allowNull: true,
         },
 
         category: {
           type: Sequelize.INTEGER,
-          references: {
-            model: "categories",
-            key: "id",
-          },
+          // references: {
+          //   model: "categories",
+          //   key: "id",
+          // },
           //Hay que cambiarlo a false cuando la foreign key ya funcione
           allowNull: true,
         },
