@@ -54,8 +54,11 @@ https://trello.com/invite/b/iCxXDeyI/1c87c71f246b0a305d89d3a0ad50ca78/fastbar
 
 ## SQL
 
-STRUCTURE.SQL --> https://github.com/fbayona13/grupo.8.FastBar/blob/sprint_6/ResourcesSQL/fastbar_db_test.sql
-DER --> https://drawsql.app/teams/grupo-8/diagrams/der
+STRUCTURE.SQL
+https://github.com/fbayona13/grupo.8.FastBar/blob/sprint_6/ResourcesSQL/fastbar_db_test.sql
+
+DER
+https://drawsql.app/teams/grupo-8/diagrams/der
 ![DER](ResourcesSQL/DER_FastBar.png)
 
 
