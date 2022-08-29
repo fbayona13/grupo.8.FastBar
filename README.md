@@ -52,7 +52,8 @@ https://www.figma.com/file/bAOfw0gwl9gYsO6JMnO8Ut/Alpha-wireframe?node-id=0%3A1
 TRELLO
 https://trello.com/invite/b/iCxXDeyI/1c87c71f246b0a305d89d3a0ad50ca78/fastbar
 
-## SQL 
+## SQL
+
 https://drawsql.app/teams/grupo-8/diagrams/der
 ![DER](DER_FastBar.png)
 

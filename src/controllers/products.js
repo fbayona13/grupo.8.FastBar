@@ -1,47 +1,56 @@
-const {
-  indexProducts,
-  oneProduct,
-  create,
-  write,
-} = require("../models/products.model");
+// const {
+//   Product.findAll,
+//   Product.findByPk,
+//   create,
+//   write,
+// } = require("../models/products.model");
+
+const { product } = require("../database/models/index");
 
 module.exports = {
   // El index va a ser nuestra vista con lista completa de productos
-  index: (req, res) => {
+  index: async (req, res) => {
     return res.render("products/index", {
       // head.ejs
       title: "Index",
       style: "index",
 
-      allProducts: indexProducts(),
+      allProducts: await product.findAll(),
     });
   },
 
   //Para la barra de busqueda del header.ejs
-  search: (req, res) => {
-    let products = indexProducts();
-    if (req.query && req.query.searchBar) {
-      products = products.filter(
-        (product) =>
-          product.drinkName
-            .toLowerCase()
-            .indexOf(req.query.searchBar.toLowerCase()) > -1
-      );
-    } else if (req.query && req.query.searchBar) {
-      products = products.filter(
-        (product) =>
-          product.creator
-            .toLowerCase()
-            .indexOf(req.query.searchBar.toLowerCase()) > -1
-      );
-    } else if (req.query && req.query.searchBar) {
-      products = products.filter(
-        (product) =>
-          product.category
-            .toLowerCase()
-            .indexOf(req.query.searchBar.toLowerCase()) > -1
-      );
-    }
+  search: async (req, res) => {
+    let products = await product.findAll({
+      where: {
+        drinkName: req.query.searchBar.toLowerCase(),
+        creator: req.query.searchBar.toLowerCase(),
+        category: req.query.searchBar.toLowerCase(),
+      },
+    });
+
+    // if (req.query && req.query.searchBar) {
+    //   products = products.filter(
+    //     (product) =>
+    //       product.drinkName
+    //         .toLowerCase()
+    //         .indexOf(req.query.searchBar.toLowerCase()) > -1
+    //   );
+    // } else if (req.query && req.query.searchBar) {
+    //   products = products.filter(
+    //     (product) =>
+    //       product.creator
+    //         .toLowerCase()
+    //         .indexOf(req.query.searchBar.toLowerCase()) > -1
+    //   );
+    // } else if (req.query && req.query.searchBar) {
+    //   products = products.filter(
+    //     (product) =>
+    //       product.category
+    //         .toLowerCase()
+    //         .indexOf(req.query.searchBar.toLowerCase()) > -1
+    //   );
+    // }
 
     return res.render("products/search", {
       // head.ejs
@@ -53,9 +62,9 @@ module.exports = {
   },
 
   //Para mostrar el detalle de cada producto
-  detail: (req, res) => {
-    let product = oneProduct(parseInt(req.params.id));
-    if (!product) {
+  detail: async (req, res) => {
+    let oneProduct = await product.findByPk(parseInt(req.params.id));
+    if (!oneProduct) {
       return res.redirect("/products/");
     }
 
@@ -64,12 +73,12 @@ module.exports = {
       title: "Product Detail",
       style: "productDetail",
 
-      product: product,
+      product: oneProduct,
     });
   },
 
   //Para crear y guardar nuevos productos en DB
-  newie: (req, res) => {
+  newie: async (req, res) => {
     return res.render("products/new", {
       // head.ejs
       title: "New Product",
@@ -77,20 +86,21 @@ module.exports = {
     });
   },
 
-  save: (req, res) => {
-    req.body.image = req.files[0].filename;
-    let newProduct = create(req.body);
-    let products = indexProducts();
-    products.push(newProduct);
-    write(products);
+  save: async (req, res) => {
+    await product.create(req.body);
+    // req.body.image = req.files[0].filename;
+    // let newProduct = create(req.body);
+    // let products = Product.findAll();
+    // products.push(newProduct);
+    // write(products);
 
     return res.redirect("/products/");
   },
 
   //Para editar y modificar productos de la DB
-  edit: (req, res) => {
-    let product = oneProduct(parseInt(req.params.id));
-    if (!product) {
+  edit: async (req, res) => {
+    let oneProduct = await product.findByPk(parseInt(req.params.id));
+    if (!oneProduct) {
       return res.redirect("/products/");
     }
 
@@ -99,41 +109,57 @@ module.exports = {
       title: "Edit Product",
       style: "editProduct",
 
-      product: product,
+      product: oneProduct,
     });
   },
 
-  modify: (req, res) => {
-    let product = oneProduct(parseInt(req.params.id));
-    let products = indexProducts();
-    let productModified = products.map((p) => {
-      if (p.id == product.id) {
-        p.drinkName = req.body.drinkName;
-        p.price = parseInt(req.body.price);
-        p.image =
-          req.files && req.files.length > 0 ? req.files[0].filename : p.image;
-        p.description = req.body.description;
-        p.flavorProfile = req.body.flavorProfile;
-        p.history = req.body.history;
-      }
+  modify: async (req, res) => {
+    let oneProduct = await product.findByPk(parseInt(req.params.id));
+    if (!oneProduct) {
+      return res.redirect("/product/");
+    }
+    if (oneProduct) {
+      await product.update({
+        drinkName: req.body.drinkName,
+        image: req.body.image,
+        price: req.body.price,
+        description: req.body.ingredientes,
+        category: req.body.categorias,
+        flavorProfile: req.body.sabor,
+        history: req.body.historia,
+        //Revisar el p.credentials, p.level, p.email y p.password
+      });
+    }
+    await product.save();
+    // let products = Product.findAll();
+    // let productModified = products.map((p) => {
+    //   if (p.id == product.id) {
+    //     p.drinkName = req.body.drinkName;
+    //     p.price = parseInt(req.body.price);
+    //     p.image =
+    //       req.files && req.files.length > 0 ? req.files[0].filename : p.image;
+    //     p.description = req.body.description;
+    //     p.flavorProfile = req.body.flavorProfile;
+    //     p.history = req.body.history;
+    //   }
 
-      return p;
-    });
-    write(productModified);
+    //   return p;
+    // });
+    // write(productModified);
 
     return res.redirect("/products/detail" + product.id);
   },
 
   //Para eliminar un producto de la DB
-  destroy: (req, res) => {
-    let products = indexProducts();
-    let product = oneProduct(parseInt(req.params.id));
-    if (!product) {
+  destroy: async (req, res) => {
+    let oneProduct = await product.findByPk(parseInt(req.params.id));
+    if (!oneProduct) {
       return res.redirect("/products/");
     }
 
-    let productDeleted = products.filter((p) => p.id !== req.params.id);
-    write(productDeleted);
+    product.destroy();
+    // let productDeleted = products.filter((p) => p.id !== req.params.id);
+    // write(productDeleted);
 
     return res.redirect("/products/");
   },

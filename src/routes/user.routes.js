@@ -7,6 +7,7 @@ const {
   index,
   login,
   register,
+  save,
   detail,
   edit,
   modify,
@@ -25,6 +26,7 @@ router.get("/detail/:id", detail);
 
 //Para acceder a la info del formulario new.ejs y generar un producto nuevo en la DB
 router.get("/register", register);
+router.post("/save", save);
 
 //Validacion de los elementos del register
 router.post("/register", middlewaresRegister, process);

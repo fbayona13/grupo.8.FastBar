@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     level: {
       type: DataTypes.SMALLINT,
       allowNull: false,
+      defaultValue: 1,
     },
 
     email: {
@@ -40,7 +41,6 @@ module.exports = (sequelize, DataTypes) => {
     },
   };
   let config = {
-    tableName: alias,
     timestamps: false,
     deletedAt: false,
   };

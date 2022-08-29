@@ -27,6 +27,7 @@ module.exports = {
           level: {
             type: Sequelize.SMALLINT,
             allowNull: false,
+            defaultValue: 1,
           },
 
           email: {

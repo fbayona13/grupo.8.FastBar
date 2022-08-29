@@ -69,7 +69,6 @@ module.exports = (sequelize, DataTypes) => {
     },
   };
   let config = {
-    tableName: alias,
     timestamps: false,
     deletedAt: false,
   };

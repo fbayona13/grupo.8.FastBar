@@ -1,5 +1,5 @@
 //const { indexUsers, oneUser, create, write } = require("../models/users.model");
-const { User } = require("../database/models/index");
+const { user } = require("../database/models/index");
 
 const { validationResult } = require("express-validator");
 const { hashSync } = require("bcryptjs");
@@ -12,7 +12,7 @@ module.exports = {
       title: "Index",
       style: "index",
 
-      users: await User.findAll(),
+      users: await user.findAll(),
     });
   },
 
@@ -49,7 +49,7 @@ module.exports = {
       : 2;
 
     //CREA EL USUARIO EN LA BD
-    await User.create(req.body);
+    await user.create(req.body);
 
     // VERSION MODELO DE PRUEBA
     // req.body.image = req.files[0].filename;
@@ -59,6 +59,17 @@ module.exports = {
     // write(users);
 
     return res.redirect('/user/login?msg"El registro fue exitoso"');
+  },
+
+  save: async (req, res) => {
+    await user.create(req.body);
+    // req.body.image = req.files[0].filename;
+    // let newUser = create(req.body);
+    // let users = indexUsers();
+    // users.push(newUser);
+    // write(users);
+
+    return res.redirect("/user/login");
   },
 
   login: async (req, res) => {
@@ -71,70 +82,85 @@ module.exports = {
 
   //Para mostrar el detalle de cada usuario
   detail: async (req, res) => {
-    let user = User.findByPk(parseInt(req.params.id));
-    if (!user) {
+    let oneUser = await user.findByPk(parseInt(req.params.id));
+    if (!oneUser) {
       return res.redirect("/user/");
     }
 
     return res.render("user/detail", {
       // head.ejs
-      title: "User Detail",
+      title: "user Detail",
       style: "userDetail",
 
-      user: user,
+      user: oneUser,
     });
   },
 
   //Para editar y modificar usuarios de la DB
   edit: async (req, res) => {
-    let user = User.findByPk(parseInt(req.params.id));
-    if (!user) {
+    let oneUser = await user.findByPk(parseInt(req.params.id));
+    if (!oneUser) {
       return res.redirect("/users/");
     }
 
     return res.render("users/edit", {
       // head.ejs
-      title: "Edit User",
+      title: "Edit user",
       style: "editUser",
 
-      user: user,
+      user: oneUser,
     });
   },
 
   modify: async (req, res) => {
-    let user = User.findByPk(parseInt(req.params.id));
-    let users = await User.findAll();
-    let userModified = users.map((p) => {
-      if (p.id == product.id) {
-        p.userName = req.body.userName;
-        p.image =
-          req.files && req.files.length > 0 ? req.files[0].filename : p.image;
-        p.description = req.body.description;
-        p.email = req.body.email;
-        p.password = req.body.password;
-        p.level = req.body.level;
-        p.credentials = req.body.credentials;
+    let oneUser = await user.findByPk(parseInt(req.params.id));
+    if (!oneUser) {
+      return res.redirect("/users/");
+    }
+    if (oneUser) {
+      user.update({
+        name: req.body.userName,
+        image: req.body.image,
+        email: req.body.email,
+        password: req.body.password,
         //Revisar el p.credentials, p.level, p.email y p.password
-      }
+      });
+    }
+    await user.save();
 
-      return p;
-    });
+    // let users = await user.findAll();
+    // let userModified = users.map((p) => {
+    //   if (p.id == product.id) {
+    // p.userName = req.body.userName;
+    // p.image =
+    //   req.files && req.files.length > 0 ? req.files[0].filename : p.image;
+    // p.description = req.body.description;
+    // p.email = req.body.email;
+    // p.password = req.body.password;
+    // p.level = req.body.level;
+    // p.credentials = req.body.credentials;
+    // //Revisar el p.credentials, p.level, p.email y p.password
+    //   }
 
-    write(userModified);
+    //   return p;
+    // });
 
-    return res.redirect("/user" + user.id);
+    // write(userModified);
+
+    return res.redirect("/user" + oneUser.id);
   },
 
   //Para eliminar un usuario de la DB
   destroy: async (req, res) => {
-    let users = await User.findAll();
-    let user = User.findByPk(parseInt(req.params.id));
-    if (!user) {
+    //let users = await user.findAll();
+    let oneUser = users.findByPk(parseInt(req.params.id));
+    if (!oneUser) {
       return res.redirect("/users/");
     }
+    users.destroy();
 
-    let userDeleted = users.filter((p) => p.id !== req.params.id);
-    write(userDeleted);
+    // let userDeleted = users.filter((p) => p.id !== req.params.id);
+    // write(userDeleted);
 
     return res.redirect("/login/");
   },
@@ -155,10 +181,10 @@ module.exports = {
     // }
 
     //let users = indexUsers();
-    //let users = await User.findAll();
-    let user = await User.findOne({ where: { email: req.body.email } });
+    //let users = await user.findAll();
+    let oneUser = await user.findOne({ where: { email: req.body.email } });
     //Aca se estaria loggeando el user
-    req.session.user = user;
+    req.session.user = oneUser;
 
     return res.redirect("/");
   },
