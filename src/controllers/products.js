@@ -6,6 +6,7 @@
 // } = require("../models/products.model");
 
 const { product } = require("../database/models/index");
+const { Op } = require("sequelize");
 
 module.exports = {
   // El index va a ser nuestra vista con lista completa de productos
@@ -23,9 +24,11 @@ module.exports = {
   search: async (req, res) => {
     let products = await product.findAll({
       where: {
-        drinkName: req.query.searchBar.toLowerCase(),
-        creator: req.query.searchBar.toLowerCase(),
-        category: req.query.searchBar.toLowerCase(),
+        [Op.or]: [
+          {drinkName: req.query.searchBar.toLowerCase()},
+          {creator: req.query.searchBar.toLowerCase()},
+          {category: req.query.searchBar.toLowerCase()}
+        ]
       },
     });
 
