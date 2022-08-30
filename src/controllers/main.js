@@ -8,8 +8,16 @@ module.exports = {
       style: "home",
 
       allProducts: await product.findAll(),
-      favoritesProducts: await product.findAll().filter((e) => e.favorites == true),
-      topSelectionProducts: await product.findAll().filter((e) => e.topSelection == true),
+      favoritesProducts: await product.findAll({
+        where: {
+          favorites: true,
+        }
+      }),
+      topSelectionProducts: await product.findAll({
+        where: {
+          topSelection: true,
+        }
+      }),
     });
   },
 

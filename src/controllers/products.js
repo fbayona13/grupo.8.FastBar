@@ -63,7 +63,7 @@ module.exports = {
 
   //Para mostrar el detalle de cada producto
   detail: async (req, res) => {
-    let oneProduct = await product.findByPk(parseInt(req.params.id));
+    let oneProduct = await product.findByPk(req.params.id);
     if (!oneProduct) {
       return res.redirect("/products/");
     }
@@ -99,7 +99,7 @@ module.exports = {
 
   //Para editar y modificar productos de la DB
   edit: async (req, res) => {
-    let oneProduct = await product.findByPk(parseInt(req.params.id));
+    let oneProduct = await product.findByPk(req.params.id);
     if (!oneProduct) {
       return res.redirect("/products/");
     }
@@ -114,7 +114,7 @@ module.exports = {
   },
 
   modify: async (req, res) => {
-    let oneProduct = await product.findByPk(parseInt(req.params.id));
+    let oneProduct = await product.findByPk(req.params.id);
     if (!oneProduct) {
       return res.redirect("/product/");
     }
@@ -127,15 +127,14 @@ module.exports = {
         category: req.body.categorias,
         flavorProfile: req.body.sabor,
         history: req.body.historia,
-        //Revisar el p.credentials, p.level, p.email y p.password
       });
     }
-    await product.save();
+
     // let products = Product.findAll();
     // let productModified = products.map((p) => {
     //   if (p.id == product.id) {
     //     p.drinkName = req.body.drinkName;
-    //     p.price = parseInt(req.body.price);
+    //     p.price =  (req.body.price);
     //     p.image =
     //       req.files && req.files.length > 0 ? req.files[0].filename : p.image;
     //     p.description = req.body.description;
@@ -152,12 +151,11 @@ module.exports = {
 
   //Para eliminar un producto de la DB
   destroy: async (req, res) => {
-    let oneProduct = await product.findByPk(parseInt(req.params.id));
+    let oneProduct = await product.findByPk(req.params.id);
     if (!oneProduct) {
       return res.redirect("/products/");
     }
-
-    product.destroy();
+    await product.destroy();
     // let productDeleted = products.filter((p) => p.id !== req.params.id);
     // write(productDeleted);
 
