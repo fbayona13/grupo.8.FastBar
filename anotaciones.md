@@ -169,7 +169,7 @@ Wireframe --> No Va
 - [x] Botones de edit (que aparezcan y desaparezcan con Session)
 - [x] Middleware, session, validations
 - [x] Diagramas relacionales y entidades
-- [ ] Structure.sql 
+- [x] Structure.sql 
 - [ ] Data.sql
 - [x] Modelos y carpeta database
 - [ ] Actualizar CRUD

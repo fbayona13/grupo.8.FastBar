@@ -45,6 +45,6 @@ module.exports = (sequelize, DataTypes) => {
     deletedAt: false,
   };
 
-  const User = sequelize.define(alias, cols, config);
-  return User;
+  const user = sequelize.define(alias, cols, config);
+  return user;
 };
