@@ -23,16 +23,16 @@
       <a href="/">categoria 5</a>
     </nav>
     <nav>
-      <% if (user && user.isAuth([0])) { %>
+      <% if (user && user.credentials == 0) { %>
       <a href="/products/new">Crear Trago</a>
       <a href="/products/">Admin tragos</a>
       <a href="/user/">Admin usuarios</a>
       <a href="/user/logout">Logout</a>
-      <% } else if (user && user.isAuth([1])) { %>
+      <% } else if (user && user.credentials == 1) { %>
       <a href="/user/logout">Logout</a>
       <a href="/products/new">Crear Trago</a>
       <a href="/products/">Admin tragos</a>
-      <% } else if (user && user.isAuth([2])) { %>
+      <% } else if (user && user.credentials == 2) { %>
       <a href="/user/logout">Logout</a>
       <% } %>
     </nav>

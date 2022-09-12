@@ -159,8 +159,19 @@ Wireframe --> No Va
     CRUD --> actualizar para usar con sequelize
 
         (OPCIONAL) CRUDs de tablas secundarias / paginado con OFFSET (aplicable en index user y products)
+
+# SPRINT 6 (modificaciones)
     
-01.00.00
+# SPRINT 7 (15/09 entrega)
+
+    Son validaciones. Las validaciones del back ya las habiamos hecho, queda implementar.
+    Atento a corregir errores.
+
+    express-validator --> backend
+    validator --> frontend
+
+    opcionales) hay que tener ojo con los opcionales como 'no puede repetirse los email ya registrados'(no hacer mejor)
+
 # TAREAS (implementado desde sprint 4)
 
 - [ ] Revisar y optimizar el front-end para que sea mas funcional 
@@ -174,3 +185,5 @@ Wireframe --> No Va
 - [x] Modelos y carpeta database
 - [ ] Actualizar CRUD
 - [ ] Presentacion y preparar la oratoria para el final de clase
+- [ ] Validaciones de backend
+- [ ] Validaciones de frontend
