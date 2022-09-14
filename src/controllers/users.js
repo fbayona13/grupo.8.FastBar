@@ -1,6 +1,5 @@
 //const { indexUsers, oneUser, create, write } = require("../models/users.model");
 const { user } = require("../database/models/index");
-
 const { validationResult } = require("express-validator");
 const { hashSync } = require("bcryptjs");
 

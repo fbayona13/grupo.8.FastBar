@@ -6,7 +6,7 @@
 
     <main>
       <div>
-        <form action="/products/save" method="post">
+        <form action="/products/save" method="post" id="formularioNewProduct">
           <fieldset class="classNewDrink">
             <label for="name">Nombre del trago</label>
             <input
@@ -17,7 +17,9 @@
               required
               autocomplete="off"
             />
+            <p class="msg-error"></p>
           </fieldset>
+          
           <fieldset class="classNewDrink">
             <label for="">Precio</label>
             <input
@@ -28,7 +30,9 @@
               required
               autocomplete="off"
             />
+            <p class="msg-error"></p>
           </fieldset>
+
           <fieldset class="classNewDrink">
             <label for="">Ingredientes</label>
             <input
@@ -40,7 +44,9 @@
               required
               autocomplete="off"
             />
+            <p class="msg-error"></p>
           </fieldset>
+
           <fieldset class="classNewDrink">
             <label for="">Imagen</label>
             <input
@@ -51,7 +57,9 @@
               placeholder="Foto del trago fachero"
               required
             />
+            <p class="msg-error"></p>
           </fieldset>
+
           <fieldset class="classNewDrink">
             <label for="">Categoria</label>
             <select name="categorias" id="categorias" required>
@@ -62,7 +70,9 @@
               <option value="categoria4">categoria4</option>
               <option value="categoria5">categoria5</option>
             </select>
+            <p class="msg-error"></p>
           </fieldset>
+
           <fieldset class="classNewDrink">
             <label for="">Perfil de sabor</label>
             <input
@@ -74,7 +84,9 @@
               required
               autocomplete="off"
             />
+            <p class="msg-error"></p>
           </fieldset>
+
           <fieldset class="classNewDrink">
             <label for="">Breve historia (opcional)</label>
             <input
@@ -85,7 +97,9 @@
               maxlength="200"
               autocomplete="off"
             />
+            <p class="msg-error"></p>
           </fieldset>
+
           <fieldset class="fieldsetHabemusPotio">
             <button type="reset" class="buttonHabemusPotio">
               <i class="fa-solid fa-trash"></i>

@@ -95,6 +95,7 @@ form.formularioDescripcion input {
 }
 
 .fieldsetRegister {
+  border: none;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -124,6 +125,21 @@ form.formularioDescripcion input {
   border-radius: 1rem;
   color: snow;
   background-color: black;
+}
+
+/*MSG-ERROR*/
+.msg-error{
+  display: none;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  margin: 0.50rem 0.25rem;
+  border-radius: 0.25rem;
+  color: hsl(0, 100%, 50%);
+  background-color: hsl(0, 60%, 80%);
+}
+
+.display{
+  display: block;
 }
 
 @media screen and (max-width: 500px) {

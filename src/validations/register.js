@@ -4,7 +4,7 @@ const { unlinkSync } = require("fs");
 const { user } = require("../database/models/index");
 
 const register = [
-  //Validacion Nombre y Apellido
+  //Validacion Nombre y Apellidoa
   body("campoNombreApellido")
     .notEmpty()
     .withMessage("Ingresar nombre y apellido")

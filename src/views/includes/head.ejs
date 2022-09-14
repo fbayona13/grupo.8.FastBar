@@ -26,4 +26,11 @@
   <link rel="stylesheet" href="/css/<%= style %>.css" />
   <link rel="stylesheet" href="/css/<%= style %>-tablet.css" />
   <link rel="stylesheet" href="/css/<%= style %>-desktop.css" />
+
+  <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+
+  <% if (style == 'register' || style == 'login' || style == 'newProduct') { %>
+    <script defer src='/scripts/validations/<%= style %>.validation.js'></script>
+  <% } %>
+   
 </head>

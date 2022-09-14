@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include ('../includes/head.ejs') %>
+
   <body>
     <div id="fb-root"></div>
     <script
@@ -14,7 +15,7 @@
     <main>
       <div class="loginDiv">
         <h4>Si alcohol deseas conseguir, a la comunidad te debes unir</h4>
-        <form action="/user/login" method="post" class="formularioLogin">
+        <form action="/user/login" method="post" class="formularioLogin" id="formularioLogin">
           <fielset class="fieldsetLogin">
             <label class="labelLogin" for="email">Email: </label>
             <input
@@ -26,11 +27,8 @@
               required
               value="<%= locals.oldData ? oldData.campoEmail : null %>"
               required
-            
-              <% if (locals.errors && errors.campoEmail > 0 ) { %>
-              <p class="msg-error"><%= errors.campoEmail.msg %></p>
-              <% } %>
             />
+            <p class="msg-error"></p>
           </fielset>
           <fielset class="fieldsetLogin">
             <label class="labelLogin" for="contrasena">Contrasena: </label>
@@ -41,11 +39,8 @@
               id="constrasena"
               value="<%= locals.oldData ? oldData.campoContrasena : null %>"
               required
-              
-              <% if (locals.errors && errors.campoContrasena > 0 ) { %>
-              <p class="msg-error"><%= errors.campoContrasena.msg %></p>
-              <% } %>
             />
+            <p class="msg-error"></p>
           </fielset>
           <fielset class="fieldsetButton">
             <button type="submit" class="loginButton">LOG IN</button>

@@ -172,6 +172,7 @@ Wireframe --> No Va
 
     opcionales) hay que tener ojo con los opcionales como 'no puede repetirse los email ya registrados'(no hacer mejor)
 
+01.31.17
 # TAREAS (implementado desde sprint 4)
 
 - [ ] Revisar y optimizar el front-end para que sea mas funcional 

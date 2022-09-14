@@ -31,3 +31,18 @@ div{
     height: 4vh;
     padding: 0 1vw;
 }
+
+/*MSG-ERROR*/
+.msg-error{
+  display: none;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  margin: 0.50rem 0.25rem;
+  border-radius: 0.25rem;
+  color: hsl(0, 100%, 50%);
+  background-color: hsl(0, 60%, 80%);
+}
+
+.display{
+  display: block;
+}
