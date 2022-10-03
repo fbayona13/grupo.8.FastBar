@@ -2,7 +2,9 @@
   {
     "id": 1,
     "name": "admin",
+    "lastname": "admin",
     "credentials": 0,
+    "birthday": "2000-03-23",
     "level": 1,
     "email": "admin@fastbar.com",
     "image": "campoAvatar-1660948434345-117314126.jpeg",

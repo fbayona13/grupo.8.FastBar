@@ -4,17 +4,18 @@ const router = Router();
 const storage = require("../modules/storage");
 const upload = multer({ storage: storage("usersImages") });
 const {
-  index,
-  login,
-  register,
-  save,
-  detail,
-  edit,
-  modify,
-  process,
-  access,
-  logout,
+    index,
+    login,
+    register,
+    detail,
+    edit,
+    modify,
+    process,
+    access,
+    logout,
 } = require("../controllers/users");
+
+//Middlewares
 const middlewaresRegister = require("../middlewares/register");
 const middlewaresLogin = require("../middlewares/login");
 const middlewaresIsLogged = require("../middlewares/isLogged");
@@ -26,10 +27,8 @@ router.get("/detail/:id", detail);
 
 //Para acceder a la info del formulario new.ejs y generar un producto nuevo en la DB
 router.get("/register", register);
-router.post("/save", save);
-
 //Validacion de los elementos del register
-router.post("/register", middlewaresRegister, process);
+router.post("/register", [middlewaresRegister], process);
 
 router.get("/login", login);
 //Validacion del login, y acceso a la cuenta con Session

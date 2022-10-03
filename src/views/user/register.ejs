@@ -40,122 +40,124 @@
 
         <section class="userRegistrationForm">
           <form
-            action="/user/save"
+            action="/user/register"
             method="post"
             class="formularioRegister"
             id="formularioRegister"
+            enctype="multipart/form-data"
           >
             <fieldset class="fieldsetRegister">
-              <label class="labelRegister" for="campoNombreApellido"
-                >Nombre y Apellido:
+              <label class="labelRegister" for="name"
+                >Nombre:
               </label>
               <input
                 class="inputRegister"
                 type="text"
-                name="campoNombreApellido"
-                id="campoNombreApellido"
-                placeholder="Introduzca aqui su nombre y apellido"
-                value="<%= locals.oldData ? oldData.campoNombreApellido : null %>"
+                name="name"
+                id="name"
+                placeholder="Introduzca aqui su nombre"
+                value="<%= locals.oldData ? oldData.name : null %>"
                 required
               />
               <p class="msg-error"></p>
             </fieldset>
 
             <fieldset class="fieldsetRegister">
-              <label class="labelRegister" for="campoNombreUsuario"
-                >Nombre de usuario (ID):
+              <label class="labelRegister" for="lastname"
+                >Apellido:
               </label>
               <input
                 class="inputRegister"
                 type="text"
-                name="campoNombreUsuario"
-                id="campoNombreUsuario"
-                placeholder="Debe ser unico"
-                value="<%= locals.oldData ? oldData.campoNombreUsuario : null %>"
+                name="lastname"
+                id="lastname"
+                placeholder="Introduzca aqui su apellido"
+                value="<%= locals.oldData ? oldData.lastname : null %>"
                 required
               />
               <p class="msg-error"></p>
             </fieldset>
 
             <fieldset class="fieldsetRegister">
-              <label class="labelRegister" for="">Email: </label>
+              <label class="labelRegister" for="email">Email: </label>
               <input
                 class="inputRegister"
                 type="email"
-                name="campoEmail"
-                id="campoEmail"
+                name="email"
+                id="email"
                 placeholder="Introduzca aqui su email"
-                value="<%= locals.oldData ? oldData.campoEmail : null %>"
+                value="<%= locals.oldData ? oldData.email : null %>"
                 required
               />
               <p class="msg-error"></p>
             </fieldset>
 
             <fieldset class="fieldsetRegister">
-              <label class="labelRegister" for="campoCumpleanos"
+              <label class="labelRegister" for="birthday"
                 >Fecha de nacimiento:
               </label>
               <input
                 class="inputRegister"
                 type="date"
-                name="campoCumpleanos"
-                id="campoCumpleanos"
+                name="birthday"
+                id="birthday"
                 min="2000-01-02"
+                value="<%= locals.oldData ? oldData.birthday : null %>"
                 required
               />
             </fieldset>
 
             <fieldset class="fieldsetRegister">
-              <label class="labelRegister" for="campoContrasena"
+              <label class="labelRegister" for="password"
                 >Contraseña:
               </label>
               <input
                 class="inputRegister"
                 type="password"
-                name="campoContrasena"
-                id="campoContrasena"
-                value="<%= locals.oldData ? oldData.campoContrasena : null %>"
+                name="password"
+                id="password"
+                value="<%= locals.oldData ? oldData.password : null %>"
                 required
               />
               <p class="msg-error"></p>
             </fieldset>
 
             <fieldset class="fieldsetRegister">
-              <label class="labelRegister" for="campoContrasenaRepe"
+              <label class="labelRegister" for="password2"
                 >Confirmar contraseña:
               </label>
               <input
                 class="inputRegister"
                 type="password"
-                name="campoContrasenaRepe"
-                id="campoContrasenaRepe"
-                value="<%= locals.oldData ? oldData.campoContrasenaRepe : null %>"
+                name="password2"
+                id="password2"
+                value="<%= locals.oldData ? oldData.password2 : null %>"
                 required
               />
               <p class="msg-error"></p>
             </fieldset>
 
             <fieldset class="fieldsetRegister">
-              <label class="labelRegister" for="campoAvatar"
+              <label class="labelRegister" for="image"
                 ><i class="fa-solid fa-image"></i> Foto de perfil:
               </label>
               <input
                 class="inputRegister"
                 type="file"
-                name="campoAvatar"
-                id="campoAvatar"
+                name="image"
+                id="image"
                 accept="image/*"
-                value="<%= locals.oldData ? oldData.campoAvatar : null %>"
-                required
+                value="<%= locals.oldData ? oldData.image : null %>"
               />
               <p class="msg-error"></p>
             </fieldset>
 
             <fieldset class="fieldsetTermsConditions">
-              <input type="checkbox" name="campoTerm" id="campoTerm" required />
+              <input type="checkbox" name="terms" id="terms" required />
               <label class="labelTemsConditions" for="campoTerm"
                 >Acepto los terminos y condiciones de uso y privacidad</label
               >
+              <p class="msg-error"></p>
             </fieldset>
 
             <fieldset class="fieldsetTermsConditions">

@@ -1,21 +1,24 @@
 const { extname } = require("path");
 const { diskStorage } = require("multer");
+const { randomInt } = require("crypto");
+
 let destination = function (folder) {
-  return (req, file, callback) => callback(null, "./uploads/" + folder);
+    return (req, file, callback) => callback(null, "./uploads/" + folder);
 };
 
 let filename = (req, file, callback) => {
-  const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-  callback(
-    null,
-    file.fieldname + "-" + uniqueSuffix + extname(file.originalname)
-  );
+    const uniqueSuffix = Date.now() + "-" + randomInt(1, 248);
+    callback(
+        null,
+        file.originalname + "-" + uniqueSuffix + extname(file.originalname)
+    );
 };
+
 const storage = function (folder) {
-  return diskStorage({
-    destination: destination(folder),
-    filename: filename,
-  });
+    return diskStorage({
+        destination: destination(folder),
+        filename: filename,
+    });
 };
 
 module.exports = storage;

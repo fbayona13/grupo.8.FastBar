@@ -110,7 +110,7 @@ Wireframe --> No Va
         credenciales --> 1 admin 2 vendedor 3 cliente normal
         nivel --> 1 - 100
         email
-        descripcion 
+        descripcion
         contrasena
 
     Modelo para interactuar con los datos
@@ -122,8 +122,8 @@ Wireframe --> No Va
 
     Plataforma--> categorias
         let categorias = indexProducts.map(p => p.category).filter((cat, index, array) => !array.include(cat));
-        en google: eliminar elementos repetidos 
-        ruta : products/category/vodka 
+        en google: eliminar elementos repetidos
+        ruta : products/category/vodka
         select del newProduct --> agregarlo con la logica de arriba
 
     Detalles: faltan botones de edit, y eliminar que despues con session para mostrarlo o no
@@ -144,6 +144,7 @@ Wireframe --> No Va
     isLogged
 
 [comment]: modificaciones pendientes
+
 # SPRINT 6 (01/09 entrega)
 
     Objetivo 1 -> hace regerencia a los migrations y seeders
@@ -152,7 +153,7 @@ Wireframe --> No Va
 
     Exportar sql con estructura (personalizado, SOLO estructura / tildar agregar sentencia CREATE DATABASE/USE)
 
-    Exportar sql con data para poblar la BD 
+    Exportar sql con data para poblar la BD
 
     modelos --> la parte de sequelize y la carpeta database
 
@@ -161,7 +162,7 @@ Wireframe --> No Va
         (OPCIONAL) CRUDs de tablas secundarias / paginado con OFFSET (aplicable en index user y products)
 
 # SPRINT 6 (modificaciones)
-    
+
 # SPRINT 7 (15/09 entrega)
 
     Son validaciones. Las validaciones del back ya las habiamos hecho, queda implementar.
@@ -172,19 +173,37 @@ Wireframe --> No Va
 
     opcionales) hay que tener ojo con los opcionales como 'no puede repetirse los email ya registrados'(no hacer mejor)
 
-01.31.17
+# SPRINT 7 (modificaciones)
+
+    normalizacion nombre y apellido por dos partes
+        nombre y apellidos tengan cada uno su campo
+    
+    revisar validaciones del back
+    nombre de usuario (ID) --> eliminar
+    revisar los nombres de los req.body que coincidan con el formulario
+    ver el tema de las imagenes, agregar el multer 
+    modelos tienen configuracion innesaria 
+        allowNull sacar
+        asociaciones faltan
+
+# SPRINT 8
+    
 # TAREAS (implementado desde sprint 4)
 
-- [ ] Revisar y optimizar el front-end para que sea mas funcional 
-- [ ] Corregir "categorias" -> a las categorias reales
-- [x] Mover iconos del header.ejs a la misma distancia del burger menu
-- [x] Botones de edit (que aparezcan y desaparezcan con Session)
-- [x] Middleware, session, validations
-- [x] Diagramas relacionales y entidades
-- [x] Structure.sql 
-- [ ] Data.sql
-- [x] Modelos y carpeta database
-- [ ] Actualizar CRUD
-- [ ] Presentacion y preparar la oratoria para el final de clase
-- [ ] Validaciones de backend
-- [ ] Validaciones de frontend
+-   [ ] Revisar y optimizar el front-end para que sea mas funcional
+-   [ ] Corregir "categorias" -> a las categorias reales
+-   [x] Mover iconos del header.ejs a la misma distancia del burger menu
+-   [x] Botones de edit (que aparezcan y desaparezcan con Session)
+-   [x] Middleware, session, validations
+-   [x] Diagramas relacionales y entidades
+-   [x] Structure.sql
+-   [ ] Data.sql
+-   [x] Modelos y carpeta database
+-   [x] Actualizar CRUD
+-   [ ] Presentacion y preparar la oratoria para el final de clase
+-   [x] Validaciones de backend
+-   [x] Validaciones de frontend
+-   [x] API de productos
+-   [x] API de usuarios
+-   [ ] Exportar las APIs
+-   [ ] Importarlas al dashboard

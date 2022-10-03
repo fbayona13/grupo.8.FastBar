@@ -19,7 +19,7 @@ inputs.email.addEventListener("input", (event) => {
   }
 });
 
-inputs.constrasena.addEventListener("input", (event) => {
+inputs.password.addEventListener("input", (event) => {
   let parent = event.target.parentElement;
   let value = event.target.value;
   let msg = null;

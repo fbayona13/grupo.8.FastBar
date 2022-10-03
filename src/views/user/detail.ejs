@@ -9,17 +9,16 @@
         <section class="full-cathegory">
         
             <section class="left-section">
-            <figure id="user-picture">
-              <img
-                src="/users/<%= user.image%>"
-                width="100%"
-                class="user-image"
-              />
-            </figure>
+              <figure id="user-picture">
+                <img
+                  src="/users/<%=user.image%>"
+                  width="100%"
+                  class="user-image"
+                />
+              </figure>
              </section>
     
             <section class="right-section">
-                
                     <form class="form-register">
                         <fieldset class="fieldsetRegister">
                             <label class="labelRegister" for="campoNombreApellido">Nombre y Apellido: </label>
@@ -42,7 +41,7 @@
                     <button  class="button-edit" type="submit"><a href="/user/edit" >Editar</a></button>
                     
             </section>
-          </section>
+        </section>
     </main>
     <%- include ('../includes/footer.ejs') %>
   </body>

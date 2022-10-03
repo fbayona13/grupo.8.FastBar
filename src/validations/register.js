@@ -4,85 +4,66 @@ const { unlinkSync } = require("fs");
 const { user } = require("../database/models/index");
 
 const register = [
-  //Validacion Nombre y Apellidoa
-  body("campoNombreApellido")
-    .notEmpty()
-    .withMessage("Ingresar nombre y apellido")
-    .bail()
-    .isLength({ min: 3 })
-    .withMessage("El nombre debe contener como mínimo 3 caracteres")
-    .bail(),
+    //Validacion Nombre
+    body("name")
+        .notEmpty()
+        .withMessage("Ingresar nombre")
+        .bail()
+        .isLength({ min: 3 })
+        .withMessage("El nombre debe contener como mínimo 3 caracteres")
+        .bail(),
 
-  //Validacion Nombre de Usuario
-  body("campoNombreUsuario")
-    .notEmpty()
-    .withMessage("Ingresar nombre de usuario")
-    .bail()
-    .isLength({ min: 5 })
-    .withMessage("El nombre de usuario debe contener como mínimo 5 caracteres")
-    .bail(),
+    //Validacion Apellido
+    body("lastname")
+        .notEmpty()
+        .withMessage("Ingresar apellido")
+        .bail()
+        .isLength({ min: 3 })
+        .withMessage("El apellido debe contener como mínimo 3 caracteres")
+        .bail(),
 
-  //Validacion Dirección de Correo
-  body("campoEmail")
-    .notEmpty()
-    .withMessage("Ingresar dirección de correo")
-    .bail()
-    .isEmail()
-    .withMessage("El formato de E-mail no es válido")
-    .bail()
-    .custom(async (value) => {
-      let users = await user.findAll();
-      users = users.map((u) => u.email);
-      if (users.includes(value)) {
-        throw new Error("El email ya esta registrado");
-      }
-      return true;
-    }),
+    //Validacion Dirección de Correo
+    body("email")
+        .notEmpty()
+        .withMessage("Ingresar dirección de correo")
+        .bail()
+        .isEmail()
+        .withMessage("El formato de e-mail no es válido")
+        .bail()
+        .custom(async (value) => {
+            let users = await user.findAll();
+            users = users.map((u) => u.email);
+            if (users.includes(value)) {
+                throw new Error("El email ya esta registrado");
+            }
+            return true;
+        }),
 
-  //Validacion fecha de nacimiento
-  //body('campoCumpleanos').notEmpty().withMessage('Ingresar fecha de nacimiento').bail().custom({min:}).withMessage('La ////fecha no es válida'),
+    //Validacion fecha de nacimiento
+    body("birthday")
+        .notEmpty()
+        .withMessage("Ingresar fecha de nacimiento")
+        .bail()
+        .isDate()
+        .withMessage("La fecha no es válida"),
 
-  //Validacion contraseña
-  body("campoContrasena")
-    .notEmpty()
-    .withMessage("Ingresar contraseña")
-    .bail()
-    .isLength({ min: 5 })
-    .withMessage("La contraseña debe contener como mínimo 5 caracteres"),
+    //Validacion contraseña
+    body("password")
+        .notEmpty()
+        .withMessage("Ingresar contraseña")
+        .bail()
+        .isLength({ min: 5 })
+        .withMessage("La contraseña debe contener como mínimo 5 caracteres"),
 
-  //Validacion confirmacion de contraseña
-  body("campoContrasenaRepe")
-    .notEmpty()
-    .withMessage("Ingresar contraseña")
-    .bail()
-    .isLength({ min: 5 })
-    .withMessage("La contraseña debe contener como mínimo 5 caracteres"),
+    //Validacion confirmacion de contraseña
+    body("password2")
+        .notEmpty()
+        .withMessage("Ingresar contraseña")
+        .bail()
+        .isLength({ min: 5 })
+        .withMessage("La contraseña debe contener como mínimo 5 caracteres"),
 
-  //Validacion Foto de Perfil
-  body("campoAvatar").custom((value, { req }) => {
-    let { files } = req.files;
-    if (!files || files.length == 0) {
-      throw new Error("No se subió ninguna imagen");
-    }
-    let extensions = [".svg", ".png", ".jpg", ".jpeg"];
-    let image = files[0];
-    let extension = extname(image.filename);
-    if (!extensions.includes(extension)) {
-      unlinkSync(
-        resolve(dirname, "../../uploads/", "usersImages", image.filename)
-      ); //Esta ruta puede ser un problema
-      throw new Error("La imagen debe ser .svg,.png,.jpg,.jpeg ");
-    }
-    if (image.size > 2097152) {
-      unlinkSync(
-        resolve(dirname, "../../uploads/", "usersImages", image.filename)
-      );
-      throw new Error("La imagen supera pesada 2MB");
-    }
-    return true;
-  }),
-
-  //Validacion Terminos y Condiciones
+    //Validacion Terminos y Condiciones
 ];
 
 module.exports = register;

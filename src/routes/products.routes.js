@@ -3,8 +3,6 @@ const multer = require("multer");
 const router = Router();
 const storage = require("../modules/storage");
 const upload = multer({ storage: storage("productsImages") });
-const middlewaresNewProduct = require("../middlewares/newProduct");
-
 const {
   index,
   search,
@@ -16,6 +14,9 @@ const {
   destroy,
 } = require("../controllers/products");
 
+//Middlewares
+const middlewaresNewProduct = require("../middlewares/newProduct");
+
 //Para mostrar el index de todos los productos
 router.get("/", index);
 
@@ -26,8 +27,8 @@ router.get("/search", search);
 router.get("/detail/:id", detail);
 
 //Para acceder a la info del formulario new.ejs y generar un producto nuevo en la DB
-router.get("/new", middlewaresNewProduct, newie);
-router.post("/save", [upload.any()], save);
+router.get("/new", newie);
+router.post("/save", [upload.any(), middlewaresNewProduct], save);
 //Para borrar un producto de la DB
 router.post("/delete", destroy);
 
