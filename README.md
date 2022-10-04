@@ -4,6 +4,10 @@
 
 Un sitio web con el menu de tragos de un boliche / bar, que nos permita ver la carta, pagar en el momento y nos avise cuando esta nuestro trago para retirar en la barra.
 
+## DASHBOARD FAST BAR
+
+https://github.com/fbayona13/dashboardFastBar
+
 ## INTEGRANTES DEL GRUPO
 
 - [Bayona Facundo](https://github.com/fbayona13/grupo_8_alpha-/blob/sprint_2/integrantes/facundoBayona)
