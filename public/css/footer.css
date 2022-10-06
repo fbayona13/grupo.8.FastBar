@@ -1,28 +1,28 @@
 * {
-  box-sizing: border-box;
-  font-family: Encode Sans, Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    font-family: Encode Sans, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 footer {
-  background: black;
-  color: snow;
+    background: black;
+    color: snow;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
 }
 
 /*LOGO DEL FOOTER*/
 
-#footerLogoSection{
+#footerLogoSection {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#footerLogoImg{
+#footerLogoImg {
     max-width: 100%;
     max-height: auto;
     object-fit: contain;
@@ -30,17 +30,17 @@ footer {
 
 /*TEXTO INFO Y REDES*/
 
-#infoSection{
+#infoSection {
     align-self: center;
     flex-grow: 1;
 }
 
-section article{
+section article {
     font-size: 1vw;
     font-style: italic;
 }
 
-section nav{
+section nav {
     gap: 5px;
 }
 

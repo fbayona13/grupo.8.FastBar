@@ -2,11 +2,18 @@
 
 const { indexProducts } = require("../../models/products.model");
 
+const { indexUsers } = require("../../models/users.model");
+
 module.exports = {
   async up(queryInterface, Sequelize) {
-    let images = indexProducts().map((product) => {
+    let imagesProduct = indexProducts().map((product) => {
       return Object({ image: product.image });
     });
+    let imagesUsers = indexUsers().map((user) => {
+      return Object({ image: user.image });
+    });
+    let images = [...imagesUsers, ...imagesProduct];
+
     await queryInterface.bulkInsert("images", images, {});
   },
 

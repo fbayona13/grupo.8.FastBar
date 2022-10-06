@@ -10,10 +10,18 @@ module.exports = (sequelize, DataTypes) => {
 
         image: {
             type: DataTypes.INTEGER,
+            references: {
+                model: "image",
+                key: "image",
+            },
         },
 
         category: {
             type: DataTypes.INTEGER,
+            references: {
+                model: "categories",
+                key: "category",
+            },
         },
 
         state: {

@@ -7,7 +7,7 @@ module.exports = {
                 "users",
                 {
                     id: {
-                        type: Sequelize.BIGINT,
+                        type: Sequelize.INTEGER,
                         primaryKey: true,
                         allowNull: false,
                         autoIncrement: true,
@@ -45,9 +45,6 @@ module.exports = {
                             model: "images",
                             key: "id",
                         },
-                        //Hay que cambiarlo a false cuando la foreign key ya funcione
-                        allowNull: true,
-                        
                     },
 
                     password: {

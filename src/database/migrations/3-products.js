@@ -20,7 +20,6 @@ module.exports = {
                             model: "images",
                             key: "id",
                         },
-                        allowNull: true,
                     },
 
                     category: {
@@ -29,7 +28,6 @@ module.exports = {
                             model: "categories",
                             key: "id",
                         },
-                        allowNull: true,
                     },
 
                     state: {

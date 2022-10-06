@@ -16,7 +16,11 @@ module.exports = {
             title: "Index",
             style: "index",
 
-            allProducts: await product.findAll(),
+            allProducts: await product.findAll({
+                include: {
+                    all: true,
+                },
+            }),
         });
     },
 
@@ -66,7 +70,11 @@ module.exports = {
 
     //Para mostrar el detalle de cada producto
     detail: async (req, res) => {
-        let oneProduct = await product.findByPk(req.params.id);
+        let oneProduct = await product.findByPk(req.params.id, {
+            include: {
+                all: true,
+            },
+        });
         if (!oneProduct) {
             return res.redirect("/products/");
         }

@@ -6,11 +6,11 @@
     <%- include ('../includes/header.ejs') %>
     <main>
       <section class="full-cathegory">
-        <h2 class="drink"><%= product.drinkName%></h2>
+        <h2 class="drink"><%=product.drinkName%></h2>
 
         <figure id="drink-picture">
           <img
-            src="/products/<%= product.image%>"
+            src="/productsImages/<%=product.imagen.image%>"
             width="100%"
             class="imagen-trago"
           />

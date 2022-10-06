@@ -1,65 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include ('./includes/head.ejs') %>
-  <body>
-    <%-include('./includes/header.ejs')%>
+    <%- include ('./includes/head.ejs') %>
+    <body>
+        <%-include('./includes/header.ejs')%>
 
-    <main>
-      <picture id="bannerFigure">
-        <img src="/assets/Mkt/22.png" alt="cumple-tliste.png" id="bannerHome" />
-      </picture>
+        <main>
+            <picture id="bannerFigure">
+                <img
+                    src="/assets/Mkt/22.png"
+                    alt="cumple-tliste.png"
+                    id="bannerHome"
+                />
+            </picture>
 
-      <h3>Favorites</h3>
-      <section class="productSection">
-        <% favoritesProducts.forEach(product => { %>
-        <article class="productArticle">
-          <picture>
-            <a href="products/detail/<%= product.id%>">
-              <img src="/productsImages/<%= product.image%> " alt="" class="productImg" />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5"><%= product.drinkName%></h5>
-            <p class="productPrecioP">$<%= product.price%></p>
-          </section>
-        </article>
-        <% }) %>
-      </section>
+            <h3>Favorites</h3>
+            <section class="productSection">
+                <% favoritesProducts.forEach(product => { %>
+                <article class="productArticle">
+                    <a href="products/detail/<%=product.id%>">
+                        <picture>
+                            <img
+                                src="/productsImages/<%=product.imagen.image%> "
+                                alt=""
+                                class="productImg"
+                            />
+                        </picture>
+                        <section class="productDescriptionSection">
+                            <h5 class="productNombreH5">
+                                <%= product.drinkName%>
+                            </h5>
+                            <p class="productPrecioP">$<%= product.price%></p>
+                        </section>
+                    </a>
+                </article>
+                <% }) %>
+            </section>
 
-      <h3>Top Selection</h3>
-      <section class="productSection">
-        <% topSelectionProducts.forEach(product => { %>
-        <article class="productArticle">
-          <picture>
-            <a href="products/detail/<%= product.id%>">
-              <img src="/productsImages/<%= product.image%> " alt="" class="productImg" />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5"><%= product.drinkName%></h5>
-            <p class="productPrecioP">$<%= product.price%></p>
-          </section>
-        </article>
-        <% }) %>
-      </section>
+            <h3>Top Selection</h3>
+            <section class="productSection">
+                <% topSelectionProducts.forEach(product => { %>
+                <article class="productArticle">
+                    <a href="products/detail/<%= product.id%>">
+                        <picture>
+                            <img
+                                src="/productsImages/<%=product.imagen.image%> "
+                                alt=""
+                                class="productImg"
+                            />
+                        </picture>
+                        <section class="productDescriptionSection">
+                            <h5 class="productNombreH5">
+                                <%= product.drinkName%>
+                            </h5>
+                            <p class="productPrecioP">$<%= product.price%></p>
+                        </section>
+                    </a>
+                </article>
+                <% }) %>
+            </section>
 
-      <h3>All</h3>
-      <section class="productSection">
-        <% allProducts.forEach(product => { %>
-        <article class="productArticle">
-          <picture>
-            <a href="products/detail/<%= product.id %>">
-              <img src="/productsImages/<%= product.image %>" alt="" class="productImg" />
-            </a>
-          </picture>
-          <section class="productDescriptionSection">
-            <h5 class="productNombreH5"><%= product.drinkName%></h5>
-            <p class="productPrecioP">$<%= product.price%></p>
-          </section>
-        </article>
-        <% }) %>
-      </section>
-    </main>
-    <%- include ('./includes/footer.ejs') %>
-  </body>
+            <h3>All</h3>
+            <section class="productSection">
+                <% allProducts.forEach(product => { %>
+                <article class="productArticle">
+                    <a href="products/detail/<%= product.id %>">
+                        <picture>
+                            <img
+                                src="/productsImages/<%=product.imagen.image%>"
+                                alt=""
+                                class="productImg"
+                            />
+                        </picture>
+                        <section class="productDescriptionSection">
+                            <h5 class="productNombreH5">
+                                <%= product.drinkName%>
+                            </h5>
+                            <p class="productPrecioP">$<%= product.price%></p>
+                        </section>
+                    </a>
+                </article>
+                <% }) %>
+            </section>
+        </main>
+        <%- include ('./includes/footer.ejs') %>
+    </body>
 </html>
